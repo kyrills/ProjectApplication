@@ -15,7 +15,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
-public class barChart extends AppCompatActivity {
+public class bardiagram extends AppCompatActivity {
 
     BarChart barChart;
     ArrayList<String> dates;
@@ -25,7 +25,7 @@ public class barChart extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.barchart);
+        setContentView(R.layout.fragment_grafiek);
 
         barChart = (BarChart) findViewById(R.id.bargraph);
 
