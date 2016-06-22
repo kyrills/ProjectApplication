@@ -13,12 +13,12 @@ import java.io.InputStream;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener {
-    Toolbar toolbar;
-    TabLayout tabLayout;
-    ViewPager viewPager;
-    ViewPagerAdapter viewPagerAdapter;
-    ListView listView;
-    ItemArrayAdapter itemArrayAdapter;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+    private ListView listView;
+    private ItemArrayAdapter itemArrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
