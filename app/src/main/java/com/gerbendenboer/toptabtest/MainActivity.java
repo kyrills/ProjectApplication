@@ -12,7 +12,7 @@ import android.widget.ListView;
 import java.io.InputStream;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
