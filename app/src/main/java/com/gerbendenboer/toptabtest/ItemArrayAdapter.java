@@ -16,8 +16,8 @@ public class ItemArrayAdapter extends ArrayAdapter<String[]>{
 	private List<String[]> scoreList = new ArrayList<String[]>();
 	
 	static class ItemViewHolder {
-		TextView name;
-		TextView score;
+		private TextView name;
+		private TextView score;
 	}
 	
 	public ItemArrayAdapter(Context context, int resource) {
