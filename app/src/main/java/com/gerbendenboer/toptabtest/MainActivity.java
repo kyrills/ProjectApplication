@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
+        viewPagerAdapter.addFragments(new BicycleFragment(), "fiets");
+
+
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
