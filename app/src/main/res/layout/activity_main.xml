@@ -7,17 +7,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/colorPrimaryDark"
 
     tools:context="com.gerbendenboer.toptabtest.MainActivity">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp">
+
+    </ListView>
+
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-            <include
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                layout="@layout/toolbar_layout"
-                />
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:id="@+id/view">
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/toolbar_layout"
+            />
 
         <android.support.design.widget.TabLayout
             android:layout_height="wrap_content"
@@ -25,7 +39,7 @@
             android:id="@+id/tabLayout"
             app:tabMode="fixed"
             app:tabGravity="fill"
-            >
+            android:background="#1f336b">
 
         </android.support.design.widget.TabLayout>
 
@@ -35,7 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/viewPager"
-        >
+        android:layout_below="@+id/view"
+        android:background="#1b233f"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
     </android.support.v4.view.ViewPager>
 
