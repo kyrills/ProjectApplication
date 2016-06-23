@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
+        viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
         Parcelable state = listView.onSaveInstanceState();
         listView.setAdapter(itemArrayAdapter);
         listView.onRestoreInstanceState(state);
