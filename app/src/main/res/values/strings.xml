@@ -3,4 +3,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_a_reminder_appointment_in_the_agenda_about_when_to_pick_up_the_bike_from_a_specific_location_note_your_application_must_be_capable_of_putting_the_appointment_in_the_agenda_without_explicitly_opening_the_agenda_application">Create a reminder/appointment in the agenda about when to pick up the bike from a specific location. Note​: Your application must be capable of putting the appointment in the agenda without explicitly opening the agenda application..</string>
 </resources>

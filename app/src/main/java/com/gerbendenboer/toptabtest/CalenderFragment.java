@@ -12,16 +12,18 @@ import android.widget.TextView;
 /**
  * Created by eigenaar on 23-6-2016.
  */
-public class BicycleFragment extends Fragment {
-    public  BicycleFragment(){
+public class CalenderFragment extends Fragment {
+    public  CalenderFragment(){
 
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_bycicle, container, false);
+        return inflater.inflate(R.layout.fragment_calender, container, false);
+
+
+
 
 
 
     }
 }
-
