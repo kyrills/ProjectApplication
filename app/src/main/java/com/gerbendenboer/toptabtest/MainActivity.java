@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
+        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
         viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
 //        viewPagerAdapter.addFragments(new CirkelDiagramFragment(), "Piechart");
