@@ -36,9 +36,6 @@ import java.util.ArrayList;
  */
 public class GrafiekFragment extends Fragment{
 
-    //    private XYPlot plot;
-//    private XYSeries s1;
-//    private XYSeries s2;
     private LineChart lineChart;
     private LineData data;
 
@@ -55,9 +52,6 @@ public class GrafiekFragment extends Fragment{
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        plot = (XYPlot)view.findViewById(R.id.plot);
-//        plot.addSeries(s1, new LineAndPointFormatter(Color.GREEN, Color.GREEN, null, null));
-//        plot.addSeries(s2, new LineAndPointFormatter(Color.RED, Color.RED, null, null));
 
         lineChart = (LineChart)view.findViewById(R.id.chart);
         lineChart.setDrawGridBackground(false);
@@ -71,8 +65,6 @@ public class GrafiekFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        s1 = new SimpleXYSeries(SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "series1", 1, 5, 2, 8, 3, 9);
-//        s2 = new SimpleXYSeries(SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "series2", 1, 3, 9, 5, 3, 10);
 
         ArrayList<Entry> entries = new ArrayList<>();
         entries.add(new Entry(4, 0));

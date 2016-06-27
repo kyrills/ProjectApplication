@@ -14,12 +14,12 @@ import android.widget.TextView;
 public class ItemArrayAdapter extends ArrayAdapter<String[]>{
 
 	private List<String[]> scoreList = new ArrayList<String[]>();
-	
+
 	static class ItemViewHolder {
 		private TextView name;
 		private TextView score;
 	}
-	
+
 	public ItemArrayAdapter(Context context, int resource) {
 		super(context, resource);
 	}
@@ -28,17 +28,17 @@ public class ItemArrayAdapter extends ArrayAdapter<String[]>{
 		scoreList.add(object);
 		super.add(object);
 	}
-	
+
 	@Override
 	public int getCount() {
 		return this.scoreList.size();
 	}
-	
+
 	@Override
 	public String[] getItem(int position) {
 		return this.scoreList.get(position);
 	}
-	
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View row = convertView;
@@ -53,7 +53,7 @@ public class ItemArrayAdapter extends ArrayAdapter<String[]>{
 		} else {
 			viewHolder = (ItemViewHolder) row.getTag();
 		}
-		
+
 		String[] stat = getItem(position);
 		viewHolder.name.setText(stat[0]);
 		viewHolder.score.setText(stat[1]);
