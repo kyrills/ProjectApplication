@@ -9,7 +9,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
-import com.github.mikephil.charting.charts.PieChart;
+import com.gerbendenboer.toptabtest.Fragments.BicycleFragment;
+import com.gerbendenboer.toptabtest.Fragments.CalenderFragment;
+import com.gerbendenboer.toptabtest.Fragments.DiagramFragment;
+import com.gerbendenboer.toptabtest.Fragments.GrafiekFragment;
+import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
+import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
+import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -43,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
         viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
-        viewPagerAdapter.addFragments(new PiechartFragment(), "Piechart");
+        viewPagerAdapter.addFragments(new PieChartFragmentBrand(), "Piechart1");
+        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
         viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Test");
 
