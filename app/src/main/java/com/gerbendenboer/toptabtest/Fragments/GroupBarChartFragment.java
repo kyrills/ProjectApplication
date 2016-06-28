@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class GroupBarChartFragment extends Fragment {
 
     private BarData data;
-    private CSVReaderX csvReaderX;
 
     public GroupBarChartFragment() {
         // Required empty public constructor
