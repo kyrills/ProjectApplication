@@ -7,23 +7,28 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ToggleButton;
 
+import com.gerbendenboer.toptabtest.Factory.ButtonFactory;
+import com.gerbendenboer.toptabtest.Factory.IButton;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class PieChartFragmentBrand extends Fragment {
-    private PieChart pieChart;
-    private PieData pieData;
+public class PieChartFragment extends Fragment {
+    public static PieChart pieChart;
+    public static PieData pieDataColour;
+    public static PieData pieDataBrand;
+    private IButton toggleKnoppie;
+    private ToggleButton toggleKnop;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cirkeldiagram, container, false);
+        return inflater.inflate(R.layout.fragment_piechart, container, false);
     }
 
     @Override
@@ -31,25 +36,40 @@ public class PieChartFragmentBrand extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         pieChart = (PieChart) view.findViewById(R.id.piechart);
-        pieChart.setData(pieData); //set pieData into chart
-        pieChart.setDescription("Description 1");
+//        pieChart.setData(pieDataColour); //set pieData into chart
+        pieChart.setDescription("Description");
         pieChart.animateY(1500);
+        pieChart.setTouchEnabled(false);
+
+
+        toggleKnoppie = ButtonFactory.getButton("main");
+        toggleKnop = (ToggleButton) view.findViewById(R.id.toggleButton);
+        toggleKnoppie.action(toggleKnop);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(4f, 0));
-        entries.add(new Entry(8f, 1));
-        entries.add(new Entry(6f, 2));
-        entries.add(new Entry(12f, 3));
-        entries.add(new Entry(18f, 4));
-        entries.add(new Entry(9f, 5));
+        ArrayList<Entry> entriesColour = new ArrayList<>();
+        entriesColour.add(new Entry(4f, 0));
+        entriesColour.add(new Entry(8f, 1));
+        entriesColour.add(new Entry(6f, 2));
+        entriesColour.add(new Entry(12f, 3));
+        entriesColour.add(new Entry(18f, 4));
+        entriesColour.add(new Entry(9f, 5));
+
+        ArrayList<Entry> entriesBrand = new ArrayList<>();
+        entriesBrand.add(new Entry(9f, 0));
+        entriesBrand.add(new Entry(18f, 1));
+        entriesBrand.add(new Entry(12f, 2));
+        entriesBrand.add(new Entry(6f, 3));
+        entriesBrand.add(new Entry(8f, 4));
+        entriesBrand.add(new Entry(4f, 5));
 
 
-        PieDataSet dataSet = new PieDataSet(entries, "# of calls");
+        PieDataSet dataSetColour = new PieDataSet(entriesColour, "");
+        PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"");
         ArrayList<String> labels = new ArrayList<String>();
         labels.add("January");
         labels.add("February");
@@ -59,8 +79,10 @@ public class PieChartFragmentBrand extends Fragment {
         labels.add("June");
 
 
-        pieData = new PieData(labels, dataSet);
-        dataSet.setColors(My_Colours);
+        pieDataColour = new PieData(labels, dataSetColour);
+        pieDataBrand = new PieData(labels, dataSetBrand);
+        dataSetColour.setColors(My_Colours);
+        dataSetBrand.setColors(My_Colours);
 
     }
 

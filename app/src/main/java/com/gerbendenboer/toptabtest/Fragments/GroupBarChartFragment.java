@@ -1,4 +1,4 @@
-package com.gerbendenboer.toptabtest;
+package com.gerbendenboer.toptabtest.Fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.BarData;
