@@ -1,4 +1,4 @@
-package com.gerbendenboer.toptabtest;
+package com.gerbendenboer.toptabtest.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,6 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.gerbendenboer.toptabtest.OnFragmentInteractionListener;
+import com.gerbendenboer.toptabtest.R;
 
 
 /**

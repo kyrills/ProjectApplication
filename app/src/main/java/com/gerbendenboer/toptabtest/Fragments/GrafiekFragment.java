@@ -1,4 +1,4 @@
-package com.gerbendenboer.toptabtest;
+package com.gerbendenboer.toptabtest.Fragments;
 
 
 import android.annotation.TargetApi;
@@ -21,6 +21,7 @@ import com.androidplot.xy.SimpleXYSeries;
 import com.androidplot.xy.XYAxisType;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
+import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
