@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class GroupBarChartFragment extends Fragment {
 
     private BarData data;
+    private CSVReaderX csvReaderX;
 
     public GroupBarChartFragment() {
         // Required empty public constructor
@@ -33,12 +34,13 @@ public class GroupBarChartFragment extends Fragment {
         barChart.zoom(2, 2, 0, 0);
         Legend legend = barChart.getLegend();
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
-
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //csvReaderX.run();
 
         ArrayList<String> labels = new ArrayList<>();
         labels.add("J");
@@ -55,7 +57,7 @@ public class GroupBarChartFragment extends Fragment {
         labels.add("D");
 
         ArrayList<BarEntry> group1 = new ArrayList<>();
-        group1.add(new BarEntry(8f, 0));
+        group1.add(new BarEntry(3f, 0));
         group1.add(new BarEntry(12f, 1));
         group1.add(new BarEntry(9f, 2));
         group1.add(new BarEntry(8f, 3));
@@ -93,7 +95,6 @@ public class GroupBarChartFragment extends Fragment {
         dataset.add(barDataSet2);
 
         data = new BarData(labels, dataset);
-
     }
 
     @Override

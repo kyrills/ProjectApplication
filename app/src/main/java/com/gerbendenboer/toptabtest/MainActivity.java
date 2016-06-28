@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.github.mikephil.charting.charts.PieChart;
 
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.List;
 
@@ -20,18 +21,22 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
-    private ItemArrayAdapter itemArrayAdapter;
+    private CSVReaderX csvReaderX;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar)findViewById(R.id.toolBar);
+
+//        csvReaderX = new CSVReaderX(this.getApplicationContext(), "fietstrommels.csv");
+//        csvReaderX.run();
+
+        toolbar = (Toolbar) findViewById(R.id.toolBar);
         listView = (ListView) findViewById(R.id.list_view);
         setSupportActionBar(toolbar);
-        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
-        itemArrayAdapter = new ItemArrayAdapter(getApplicationContext(), R.layout.single_list_item);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
@@ -40,18 +45,12 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
         viewPagerAdapter.addFragments(new PiechartFragment(), "Piechart");
         viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
-        Parcelable state = listView.onSaveInstanceState();
-        listView.setAdapter(itemArrayAdapter);
-        listView.onRestoreInstanceState(state);
+        viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Test");
+
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        InputStream inputStream = getResources().openRawResource(R.raw.fietstrommels_maart_2013__1_);
-        CSVReader csv = new CSVReader(inputStream);
-        List<String[]> scoreList = csv.read();
 
-        for(String [] scoreData : scoreList) {
-            itemArrayAdapter.add(scoreData);
-        }
+
     }
 
     @Override
