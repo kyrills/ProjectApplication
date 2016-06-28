@@ -45,25 +45,6 @@ public class GrafiekFragment extends Fragment{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_grafiek, container, false);
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        lineChart = (LineChart)view.findViewById(R.id.chart);
-        lineChart.setDrawGridBackground(false);
-        lineChart.setData(data);
-        lineChart.animateY(2500);
-        lineChart.setDescription("");
-        Legend legend = lineChart.getLegend();
-        legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -103,9 +84,26 @@ public class GrafiekFragment extends Fragment{
         dataset.setValueTextColor(Color.WHITE);
         dataset.setHighLightColor(Color.YELLOW);
         dataset.setCircleColor(Color.YELLOW);
-        dataset.setDrawCubic(false);
         dataset.setDrawFilled(true);
+    }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        lineChart = (LineChart)view.findViewById(R.id.chart);
+        lineChart.setDrawGridBackground(false);
+        lineChart.setData(data);
+        lineChart.animateY(2500);
+        lineChart.setDescription("");
+        Legend legend = lineChart.getLegend();
+        legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_grafiek, container, false);
     }
 
 }

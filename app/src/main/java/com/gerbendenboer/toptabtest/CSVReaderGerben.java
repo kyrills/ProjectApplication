@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CSVReaderX {
+public class CSVReaderGerben {
 
     public float Centrum = 0;
     public float Charlois = 0;
@@ -26,10 +26,12 @@ public class CSVReaderX {
     Context myContext;
     String filename;
 
-    public CSVReaderX(Context myContext, String filename){
+    public CSVReaderGerben(Context myContext, String filename){
         this.myContext = myContext;
         this.filename = filename;
     }
+
+
 
     public void run() {
 
@@ -88,19 +90,22 @@ public class CSVReaderX {
             }
         }
 
+
         System.out.println(Centrum + " Centrum" );
-        System.out.println(Charlois + " Charlois");
-        System.out.println(Delfshaven + " Delfshaven");
-        System.out.println(Feijenoord + " Feijenoord");
-        System.out.println(Noord + " Noord");
-        System.out.println(Hillegersberg + " Hillegersberg");
-        System.out.println(Overschie + " Overschie");
-        System.out.println(West + " West");
-        System.out.println(Pernis + " Pernis");
-        System.out.println(IJsselmonde + " IJsselmonde");
-        System.out.println(Omoord + " Omoord");
-        System.out.println(Hoogvliet + " Hoogvliet");
-        System.out.println(kCrooswijk + " Kralingen / Crooswijk");
+        setCentrum(Centrum);
+
+//        System.out.println(Charlois + " Charlois");
+//        System.out.println(Delfshaven + " Delfshaven");
+//        System.out.println(Feijenoord + " Feijenoord");
+//        System.out.println(Noord + " Noord");
+//        System.out.println(Hillegersberg + " Hillegersberg");
+//        System.out.println(Overschie + " Overschie");
+//        System.out.println(West + " West");
+//        System.out.println(Pernis + " Pernis");
+//        System.out.println(IJsselmonde + " IJsselmonde");
+//        System.out.println(Omoord + " Omoord");
+//        System.out.println(Hoogvliet + " Hoogvliet");
+//        System.out.println(kCrooswijk + " Kralingen / Crooswijk");
 
     }
 
@@ -145,7 +150,6 @@ public class CSVReaderX {
     }
 
     public float getCharlois() {
-
         return Charlois;
     }
 
@@ -155,5 +159,57 @@ public class CSVReaderX {
 
     public float getNoord() {
         return Noord;
+    }
+
+    public void setCentrum(float centrum) {
+        Centrum = centrum;
+    }
+
+    public void setCharlois(float charlois) {
+        Charlois = charlois;
+    }
+
+    public void setDelfshaven(float delfshaven) {
+        Delfshaven = delfshaven;
+    }
+
+    public void setFeijenoord(float feijenoord) {
+        Feijenoord = feijenoord;
+    }
+
+    public void setNoord(float noord) {
+        Noord = noord;
+    }
+
+    public void setHillegersberg(float hillegersberg) {
+        Hillegersberg = hillegersberg;
+    }
+
+    public void setOverschie(float overschie) {
+        Overschie = overschie;
+    }
+
+    public void setkCrooswijk(float kCrooswijk) {
+        this.kCrooswijk = kCrooswijk;
+    }
+
+    public void setPernis(float pernis) {
+        Pernis = pernis;
+    }
+
+    public void setIJsselmonde(float IJsselmonde) {
+        this.IJsselmonde = IJsselmonde;
+    }
+
+    public void setWest(float west) {
+        West = west;
+    }
+
+    public void setOmoord(float omoord) {
+        Omoord = omoord;
+    }
+
+    public void setHoogvliet(float hoogvliet) {
+        Hoogvliet = hoogvliet;
     }
 }
