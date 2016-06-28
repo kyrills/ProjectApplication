@@ -11,6 +11,7 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class MainButton extends AppCompatActivity implements IButton {
             @Override
             public void onClick(View v) {
                 if (toggleButton.isChecked()){
-                    PieChartFragment.pieChart.setData(PieChartFragment.pieDataColour);
+
                 }else{
 
                 }

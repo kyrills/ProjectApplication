@@ -23,8 +23,8 @@ public class PieChartFragment extends Fragment {
     public static PieChart pieChart;
     public static PieData pieDataColour;
     public static PieData pieDataBrand;
-    private IButton toggleKnoppie;
-    private ToggleButton toggleKnop;
+//    private IButton toggleKnoppie;
+//    private ToggleButton toggleKnop;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,15 +36,16 @@ public class PieChartFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         pieChart = (PieChart) view.findViewById(R.id.piechart);
-//        pieChart.setData(pieDataColour); //set pieData into chart
+        pieChart.setData(pieDataColour); //set pieData into chart
+
         pieChart.setDescription("Description");
         pieChart.animateY(1500);
         pieChart.setTouchEnabled(false);
 
 
-        toggleKnoppie = ButtonFactory.getButton("main");
-        toggleKnop = (ToggleButton) view.findViewById(R.id.toggleButton);
-        toggleKnoppie.action(toggleKnop);
+//        toggleKnoppie = ButtonFactory.getButton("main");
+//        toggleKnop = (ToggleButton) view.findViewById(R.id.toggleButton);
+//        toggleKnoppie.action(toggleKnop);
     }
 
     @Override
