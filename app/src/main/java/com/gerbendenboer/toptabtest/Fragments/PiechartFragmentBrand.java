@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gerbendenboer.toptabtest.R;
+import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -17,20 +18,20 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class PieChartFragmentBrand extends Fragment {
+public class PiechartFragmentBrand extends Fragment {
     private PieChart pieChart;
     private PieData pieData;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cirkeldiagram, container, false);
+        return inflater.inflate(R.layout.fragment_piechart, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        pieChart = (PieChart) view.findViewById(R.id.piechart);
+        pieChart = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChart.setData(pieData); //set pieData into chart
         pieChart.setDescription("Description 1");
         pieChart.animateY(1500);

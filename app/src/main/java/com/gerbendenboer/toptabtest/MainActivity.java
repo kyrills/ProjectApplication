@@ -1,7 +1,6 @@
 package com.gerbendenboer.toptabtest;
 
 import android.net.Uri;
-import android.os.Parcelable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,12 +13,11 @@ import com.gerbendenboer.toptabtest.Fragments.CalenderFragment;
 import com.gerbendenboer.toptabtest.Fragments.DiagramFragment;
 import com.gerbendenboer.toptabtest.Fragments.GrafiekFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
-import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
-import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
-
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.List;
+//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
+//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
+import com.gerbendenboer.toptabtest.Fragments.PiechartFragmentBrand;
+import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
+import com.gerbendenboer.toptabtest.Fragments.TESTGROUPCHART;
 
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
     private Toolbar toolbar;
@@ -27,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
-    private CSVReaderX csvReaderX;
+    public static CSVReader Fietstrommels;
+    public static CSVReader Diefstal4;
 
 
     @Override
@@ -35,8 +34,11 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        csvReaderX = new CSVReaderX(this.getApplicationContext(), "fietstrommels.csv");
-//        csvReaderX.run();
+        Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+
+        Diefstal4 = new CSVReader(this.getApplicationContext(), "fietsroof4.csv");
+
+        Diefstal4.runDiefstal();
 
         toolbar = (Toolbar) findViewById(R.id.toolBar);
         listView = (ListView) findViewById(R.id.list_view);
@@ -46,17 +48,17 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
-        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
+        //viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
         viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
-        viewPagerAdapter.addFragments(new PieChartFragmentBrand(), "Piechart1");
-        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
+        viewPagerAdapter.addFragments(new PiechartFragmentBrand(), "Piechart1");
+//        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
         viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
-        viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Test");
+        viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
+        viewPagerAdapter.addFragments(new TESTGROUPCHART(), "TEST");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
 
     }
 

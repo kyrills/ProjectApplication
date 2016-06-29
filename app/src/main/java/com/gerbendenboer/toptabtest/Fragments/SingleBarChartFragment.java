@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
@@ -24,6 +25,7 @@ public class SingleBarChartFragment extends Fragment {
 
     Context cont;
     private BarData data;
+    private int topFiveIndex;
 
     public SingleBarChartFragment() {
         // Required empty public constructor
@@ -32,43 +34,85 @@ public class SingleBarChartFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        topFiveIndex = 0;
 
-        //csvReader.run();
-//        System.out.println("TEST" + MainActivity.csvReader.Centrum);
-//        System.out.println(MainActivity.csvReader.Charlois);
+        MainActivity.Fietstrommels.runFietstrommels();
 
         ArrayList<String> labels = new ArrayList<>();
-        labels.add("J");
-        labels.add("F");
-        labels.add("M");
-        labels.add("A");
-        labels.add("M");
-        labels.add("J");
-        labels.add("J");
-        labels.add("A");
-        labels.add("S");
-        labels.add("O");
-        labels.add("N");
-        labels.add("D");
-
         ArrayList<BarEntry> group1 = new ArrayList<>();
-        group1.add(new BarEntry(3f, 0));
-        group1.add(new BarEntry(12f, 1));
-        group1.add(new BarEntry(9f, 2));
-        group1.add(new BarEntry(8f, 3));
-        group1.add(new BarEntry(12f, 4));
-        group1.add(new BarEntry(9f, 5));
-        group1.add(new BarEntry(8f, 6));
-        group1.add(new BarEntry(12f, 7));
-        group1.add(new BarEntry(9f, 8));
-        group1.add(new BarEntry(8f, 9));
-        group1.add(new BarEntry(12f, 10));
-        group1.add(new BarEntry(9f, 11));
 
-        BarDataSet barDataSet1 = new BarDataSet(group1, "Diefstal");
+        for (float x = 999; x >= 0; x--){
+            if(topFiveIndex <= 4) {
+                if (MainActivity.Fietstrommels.getCentrum() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Centrum");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getCharlois() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Charlois");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getDelfshaven() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Delfshaven");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getFeijenoord() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Feijenoord");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getHillegersberg() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Hillegersberg");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getHoogvliet() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Hoogvliet");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getIJsselmonde() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("IJsselmonde");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getkCrooswijk() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Crooswijk");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getNoord() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Noord");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getOmoord() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Omoord");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getOverschie() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Overschie");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getPernis() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("Pernis");
+                    topFiveIndex += 1;
+                }
+                if (MainActivity.Fietstrommels.getWest() == x) {
+                    group1.add(new BarEntry(x, topFiveIndex));
+                    labels.add("West");
+                    topFiveIndex += 1;
+                }
+            }
+        }
+
+        BarDataSet barDataSet1 = new BarDataSet(group1, "Fietstrommels");
         barDataSet1.setColor(Color.YELLOW);
-
-
 
         data = new BarData(labels, barDataSet1);
     }
@@ -76,10 +120,9 @@ public class SingleBarChartFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        BarChart barChart = (BarChart)view.findViewById(R.id.groupedBarChart);
+        BarChart barChart = (BarChart)view.findViewById(R.id.singleBarChart);
         barChart.setData(data);
         barChart.animateY(1500);
-        barChart.zoomIn();
         Legend legend = barChart.getLegend();
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
     }

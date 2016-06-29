@@ -19,7 +19,7 @@
         tools:context=".Fragments.GroupBarChartFragment">
 
         <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/singleBarChart"
+        android:id="@+id/groupedBarChart"
             android:layout_width="match_parent"
             android:layout_height="600dp"
             android:layout_marginTop="0dp"/>
