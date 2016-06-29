@@ -20,9 +20,10 @@ import com.github.mikephil.charting.data.PieDataSet;
 import java.util.ArrayList;
 
 public class PieChartFragment extends Fragment {
-    public static PieChart pieChart;
-    public static PieData pieDataColour;
-    public static PieData pieDataBrand;
+    private PieChart pieChartBrand;
+    private PieChart pieChartColour;
+    private PieData pieDataColour;
+    private PieData pieDataBrand;
 //    private IButton toggleKnoppie;
 //    private ToggleButton toggleKnop;
 
@@ -35,12 +36,17 @@ public class PieChartFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        pieChart = (PieChart) view.findViewById(R.id.piechart);
-        pieChart.setData(pieDataColour); //set pieData into chart
+        pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
+        pieChartBrand.setData(pieDataBrand); //set pieData into chart
+        pieChartBrand.setDescription("Description");
+        pieChartBrand.animateY(1500);
+        pieChartBrand.setTouchEnabled(false);
 
-        pieChart.setDescription("Description");
-        pieChart.animateY(1500);
-        pieChart.setTouchEnabled(false);
+        pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
+        pieChartColour.setData(pieDataColour);
+        pieChartColour.setDescription("Desc");
+        pieChartColour.animateY(1500);
+        pieChartColour.setTouchEnabled(false);
 
 
 //        toggleKnoppie = ButtonFactory.getButton("main");
