@@ -23,11 +23,7 @@ public class MainButton extends AppCompatActivity implements IButton {
         toggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (toggleButton.isChecked()){
 
-                }else{
-
-                }
             }
         });
 

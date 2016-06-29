@@ -24,8 +24,14 @@ public class PieChartFragment extends Fragment {
     private PieChart pieChartColour;
     private PieData pieDataColour;
     private PieData pieDataBrand;
-//    private IButton toggleKnoppie;
-//    private ToggleButton toggleKnop;
+
+    private static final int[] My_Colours = {
+            Color.rgb(180, 80, 138), Color.rgb(254, 149, 7), Color.rgb(254, 247, 120),
+            Color.rgb(106, 150, 134), Color.rgb(53, 210, 209), Color.rgb(255, 80, 138),
+            Color.rgb(254, 50, 7), Color.rgb(254, 200, 120), Color.rgb(106, 100, 134),
+            Color.rgb(106, 200, 134), Color.rgb(5, 175, 254), Color.rgb(102, 51, 0)
+    };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,20 +44,17 @@ public class PieChartFragment extends Fragment {
 
         pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChartBrand.setData(pieDataBrand); //set pieData into chart
-        pieChartBrand.setDescription("Description");
+        pieChartBrand.setDescription("Most stolen bike brands");
+        pieChartBrand.setDescriptionColor(Color.WHITE);
         pieChartBrand.animateY(1500);
-        pieChartBrand.setTouchEnabled(false);
+//        pieChartBrand.setTouchEnabled(false);
 
         pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
         pieChartColour.setData(pieDataColour);
-        pieChartColour.setDescription("Desc");
+        pieChartColour.setDescription("Most stolen bikes depending on colour");
+        pieChartColour.setDescriptionColor(Color.WHITE);
         pieChartColour.animateY(1500);
-        pieChartColour.setTouchEnabled(false);
-
-
-//        toggleKnoppie = ButtonFactory.getButton("main");
-//        toggleKnop = (ToggleButton) view.findViewById(R.id.toggleButton);
-//        toggleKnoppie.action(toggleKnop);
+//        pieChartColour.setTouchEnabled(false);
     }
 
     @Override
@@ -74,7 +77,6 @@ public class PieChartFragment extends Fragment {
         entriesBrand.add(new Entry(8f, 4));
         entriesBrand.add(new Entry(4f, 5));
 
-
         PieDataSet dataSetColour = new PieDataSet(entriesColour, "");
         PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"");
         ArrayList<String> labels = new ArrayList<String>();
@@ -85,20 +87,12 @@ public class PieChartFragment extends Fragment {
         labels.add("May");
         labels.add("June");
 
-
         pieDataColour = new PieData(labels, dataSetColour);
         pieDataBrand = new PieData(labels, dataSetBrand);
         dataSetColour.setColors(My_Colours);
         dataSetBrand.setColors(My_Colours);
-
     }
 
-    public static final int[] My_Colours = {
-            Color.rgb(180, 80, 138), Color.rgb(254, 149, 7), Color.rgb(254, 247, 120),
-            Color.rgb(106, 150, 134), Color.rgb(53, 210, 209), Color.rgb(255, 80, 138),
-            Color.rgb(254, 50, 7), Color.rgb(254, 200, 120), Color.rgb(106, 100, 134),
-            Color.rgb(106, 200, 134), Color.rgb(5, 175, 254), Color.rgb(102, 51, 0)
-    };
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

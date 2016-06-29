@@ -13,21 +13,19 @@ android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_gravity= "center_horizontal">
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartBrand"
             android:layout_width="300dp"
             android:layout_height="600dp"
-            android:layout_marginTop="-135dp"
-            android:layout_marginLeft="30dp"/>
+            android:layout_marginTop="-135dp"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartColour"
             android:layout_width="300dp"
             android:layout_height="600dp"
-            android:layout_marginTop="-110dp"
-            android:layout_marginLeft="30dp"/>
+            android:layout_marginTop="-110dp"/>
     </LinearLayout>
 
 </ScrollView>

@@ -10,12 +10,8 @@ import android.widget.TextView;
 
 import com.gerbendenboer.toptabtest.R;
 
-
-/**
- * Created by eigenaar on 23-6-2016.
- */
-public class CalenderFragment extends Fragment {
-    public  CalenderFragment(){
+public class CalendarFragment extends Fragment {
+    public  CalendarFragment(){
 
     }
     @Override

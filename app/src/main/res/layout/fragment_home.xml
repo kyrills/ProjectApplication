@@ -5,13 +5,55 @@
     tools:context=".Fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home fragment"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        />
+        android:layout_height="match_parent"
+        android:layout_gravity= "center_horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="Welcome to the app of group 4 of INF1E!"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="This app provides different kinds of information about stolen bikes and bike containers in Rotterdam. For example: the most wanted bike brands amongst thieves."
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Every chart is provided with additional information, so understanding what the information we provide isn't hard at al."
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Have fun using our app!"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
 
 </FrameLayout>

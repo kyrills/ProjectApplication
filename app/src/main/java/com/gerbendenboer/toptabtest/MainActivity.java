@@ -9,13 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
 import com.gerbendenboer.toptabtest.Fragments.BicycleFragment;
-import com.gerbendenboer.toptabtest.Fragments.CalenderFragment;
 import com.gerbendenboer.toptabtest.Fragments.DiagramFragment;
 import com.gerbendenboer.toptabtest.Fragments.GrafiekFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
-//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
-//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
-import com.gerbendenboer.toptabtest.Fragments.PiechartFragmentBrand;
+import com.gerbendenboer.toptabtest.Fragments.CalendarFragment;
+import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.TESTGROUPCHART;
 
@@ -51,14 +49,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         //viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
         viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
         viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
-        viewPagerAdapter.addFragments(new PiechartFragmentBrand(), "Piechart1");
-//        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
-        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
+        viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
+        viewPagerAdapter.addFragments(new CalendarFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
         viewPagerAdapter.addFragments(new TESTGROUPCHART(), "TEST");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
 
     }
 
