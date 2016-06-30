@@ -112,7 +112,7 @@ public class SingleBarChartFragment extends Fragment {
         }
 
         BarDataSet barDataSet1 = new BarDataSet(group1, "Fietstrommels");
-        barDataSet1.setColor(Color.YELLOW);
+        barDataSet1.setColor(Color.parseColor("#e62e00"));
 
         data = new BarData(labels, barDataSet1);
     }
@@ -123,6 +123,7 @@ public class SingleBarChartFragment extends Fragment {
         BarChart barChart = (BarChart)view.findViewById(R.id.singleBarChart);
         barChart.setData(data);
         barChart.animateY(1500);
+        barChart.setDescription("");
         Legend legend = barChart.getLegend();
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
     }

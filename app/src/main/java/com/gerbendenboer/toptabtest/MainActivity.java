@@ -8,16 +8,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
-import com.gerbendenboer.toptabtest.Fragments.BicycleFragment;
-import com.gerbendenboer.toptabtest.Fragments.CalenderFragment;
-import com.gerbendenboer.toptabtest.Fragments.DiagramFragment;
-import com.gerbendenboer.toptabtest.Fragments.GrafiekFragment;
+import com.gerbendenboer.toptabtest.Data.CSVReader;
+import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
 //import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
 //import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
 import com.gerbendenboer.toptabtest.Fragments.PiechartFragmentBrand;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
-import com.gerbendenboer.toptabtest.Fragments.TESTGROUPCHART;
+import com.gerbendenboer.toptabtest.Fragments.GroupBarChartFragment;
 
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
     private Toolbar toolbar;
@@ -26,7 +24,8 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
     public static CSVReader Fietstrommels;
-    public static CSVReader Diefstal4;
+    public static CSVReader DiefstalMaand;
+    public static CSVReader Brands;
 
 
     @Override
@@ -35,10 +34,13 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         setContentView(R.layout.activity_main);
 
         Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+        Fietstrommels.runFietstrommels();
 
-        Diefstal4 = new CSVReader(this.getApplicationContext(), "fietsroof4.csv");
+        DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
+        //DiefstalMaand.runDiefstal();
 
-        Diefstal4.runDiefstal();
+        Brands = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
+        Brands.runBrand();
 
         toolbar = (Toolbar) findViewById(R.id.toolBar);
         listView = (ListView) findViewById(R.id.list_view);
@@ -47,19 +49,23 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
-        viewPagerAdapter.addFragments(new GrafiekFragment(), "Grafiek");
-        //viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Barchart");
-        viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
-        viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
-        viewPagerAdapter.addFragments(new PiechartFragmentBrand(), "Piechart1");
+        viewPagerAdapter.addFragments(new LineChartFragment(), "Graph");
+//        viewPagerAdapter.addFragments(new BicycleFragment(), "");
+        viewPagerAdapter.addFragments(new PiechartFragmentBrand(), "Piechart");
 //        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
-        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
+//        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
-        viewPagerAdapter.addFragments(new TESTGROUPCHART(), "TEST");
+        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Grouped");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            tabLayout.getTabAt(0).setIcon(R.drawable.home);
+            tabLayout.getTabAt(1).setIcon(R.drawable.linechart);
+            tabLayout.getTabAt(2).setIcon(R.drawable.piechart);
+            tabLayout.getTabAt(3).setIcon(R.drawable.ranking);
+            tabLayout.getTabAt(4).setIcon(R.drawable.barchart);
+        }
     }
 
     @Override

@@ -21,6 +21,7 @@ import com.androidplot.xy.SimpleXYSeries;
 import com.androidplot.xy.XYAxisType;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
+import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -35,12 +36,12 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class GrafiekFragment extends Fragment{
+public class LineChartFragment extends Fragment{
 
     private LineChart lineChart;
     private LineData data;
 
-    public GrafiekFragment() {
+    public LineChartFragment() {
         // Required empty public constructor
     }
 
@@ -48,21 +49,23 @@ public class GrafiekFragment extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(4, 0));
-        entries.add(new Entry(8, 1));
-        entries.add(new Entry(6, 2));
-        entries.add(new Entry(2, 3));
-        entries.add(new Entry(18, 4));
-        entries.add(new Entry(9, 5));
-        entries.add(new Entry(4, 6));
-        entries.add(new Entry(8, 7));
-        entries.add(new Entry(7, 8));
-        entries.add(new Entry(2, 9));
-        entries.add(new Entry(14, 10));
-        entries.add(new Entry(9, 11));
+        MainActivity.DiefstalMaand.runDiefstal();
 
-        LineDataSet dataset = new LineDataSet(entries, "# of Calls");
+        ArrayList<Entry> entries = new ArrayList<>();
+        entries.add(new Entry(MainActivity.DiefstalMaand.getJanuari(), 0));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getFebruari(), 1));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getMaart(), 2));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getApril(), 3));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getMei(), 4));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getJuni(), 5));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getJuli(), 6));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getAugustus(), 7));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getSeptember(), 8));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getOktober(), 9));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getNovember(), 10));
+        entries.add(new Entry(MainActivity.DiefstalMaand.getDecember(), 11));
+
+        LineDataSet dataset = new LineDataSet(entries, "Diefstal per maand");
 
         ArrayList<String> labels = new ArrayList<String>();
         labels.add("J");
@@ -79,12 +82,17 @@ public class GrafiekFragment extends Fragment{
         labels.add("D");
 
         data = new LineData(labels, dataset);
-        dataset.setColor(Color.WHITE);
-        dataset.setFillColor(Color.LTGRAY);
-        dataset.setValueTextColor(Color.WHITE);
-        dataset.setHighLightColor(Color.YELLOW);
-        dataset.setCircleColor(Color.YELLOW);
-        dataset.setDrawFilled(true);
+        dataset.setColor(Color.parseColor("#e62e00"));
+        dataset.setLineWidth(4);
+        dataset.setValueTextColor(Color.BLACK);
+        dataset.setHighLightColor(Color.parseColor("#cccccc"));
+        dataset.setHighlightLineWidth(2);
+        dataset.setCircleColor(Color.parseColor("#cccccc"));
+        dataset.setCircleColorHole(Color.parseColor("#cccccc"));
+
+//        Optional
+//        dataset.setFillColor(Color.parseColor("#e62e00"));
+//        dataset.setDrawFilled(false);
     }
 
     @Override

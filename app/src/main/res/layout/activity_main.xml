@@ -9,7 +9,8 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/colorPrimaryDark"
 
-    tools:context="com.gerbendenboer.toptabtest.MainActivity">
+    tools:context="com.gerbendenboer.toptabtest.MainActivity"
+    android:background="@color/colorPrimary">
 
     <ListView
         android:layout_width="match_parent"
@@ -37,9 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/tabLayout"
-            app:tabMode="fixed"
+            app:tabMode="scrollable"
             app:tabGravity="fill"
-            android:background="#1f336b">
+            android:background="@color/colorPrimary"
+            android:clickable="false">
 
         </android.support.design.widget.TabLayout>
 
@@ -50,7 +52,7 @@
         android:layout_height="match_parent"
         android:id="@+id/viewPager"
         android:layout_below="@+id/view"
-        android:background="#1b233f"
+        android:background="@color/colorBackground"
         android:clickable="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
