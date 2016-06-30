@@ -9,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -21,12 +23,12 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class GrafiekFragment extends Fragment{
+public class LineChartFragment extends Fragment{
 
     private LineChart lineChart;
     private LineData data;
 
-    public GrafiekFragment() {
+    public LineChartFragment() {
         // Required empty public constructor
     }
 

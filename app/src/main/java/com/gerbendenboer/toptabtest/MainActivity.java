@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         Fietstrommels.runFietstrommels();
 
         DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
-        //DiefstalMaand.runDiefstal();
+        DiefstalMaand.runDiefstal();
 
         Brands = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
         Brands.runBrand();
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new LineChartFragment(), "Graph");
 //        viewPagerAdapter.addFragments(new BicycleFragment(), "");
-        viewPagerAdapter.addFragments(new PiechartFragmentBrand(), "Piechart");
+        viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
 //        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
 //        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
