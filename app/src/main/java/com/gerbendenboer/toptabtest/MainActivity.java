@@ -11,9 +11,8 @@ import android.widget.ListView;
 import com.gerbendenboer.toptabtest.Data.CSVReader;
 import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
-//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentBrand;
-//import com.gerbendenboer.toptabtest.Fragments.PieChartFragmentColour;
-import com.gerbendenboer.toptabtest.Fragments.PiechartFragmentBrand;
+import com.gerbendenboer.toptabtest.Fragments.CalendarFragment;
+import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.GroupBarChartFragment;
 

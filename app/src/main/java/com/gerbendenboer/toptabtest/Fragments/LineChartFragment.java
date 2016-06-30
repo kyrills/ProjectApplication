@@ -1,55 +1,38 @@
 package com.gerbendenboer.toptabtest.Fragments;
 
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+
 import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.androidplot.xy.LineAndPointFormatter;
-import com.androidplot.xy.SimpleXYSeries;
-import com.androidplot.xy.XYAxisType;
-import com.androidplot.xy.XYPlot;
-import com.androidplot.xy.XYSeries;
-import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
 import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LineChartFragment extends Fragment{
+public class GrafiekFragment extends Fragment{
 
     private LineChart lineChart;
     private LineData data;
 
-    public LineChartFragment() {
+    public GrafiekFragment() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        MainActivity.DiefstalMaand.runDiefstal();
 
         ArrayList<Entry> entries = new ArrayList<>();
         entries.add(new Entry(MainActivity.DiefstalMaand.getJanuari(), 0));
