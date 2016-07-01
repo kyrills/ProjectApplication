@@ -2,6 +2,8 @@ package com.gerbendenboer.toptabtest.Data;
 
 import android.content.Context;
 
+import com.gerbendenboer.toptabtest.IDataReader;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Centrum"
+            android:id="@+id/CentrumButton"
+            android:textSize="9dp"
+            android:clickable="false" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Charlois"
+            android:id="@+id/CharloisButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Delfshaven"
+            android:id="@+id/DelfshavenButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Feijenoord"
+            android:id="@+id/FeijenoordButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Noord"
+            android:id="@+id/NoordButon"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Hillegersberg"
+            android:id="@+id/HillegersbergButton"
+            android:textSize="8dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Overschie"
+            android:id="@+id/OverschieButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="kCrooswijk"
+            android:id="@+id/kCrooswijkButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Pernis"
+            android:id="@+id/PernisButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="IJsselmonde"
+            android:id="@+id/IJsselmondeButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="West"
+            android:id="@+id/WestButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Omoord"
+            android:id="@+id/OmoordButton"
+            android:textSize="9dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Hoogvliet"
+            android:id="@+id/HoogvlietButton"
+            android:textSize="9dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myFragment"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

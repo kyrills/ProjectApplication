@@ -1,5 +1,6 @@
 package com.gerbendenboer.toptabtest;
 
+
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -7,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
-
+import com.gerbendenboer.toptabtest.Fragments.BicycleFragment;
+import com.gerbendenboer.toptabtest.Fragments.DiagramFragment;
+import com.gerbendenboer.toptabtest.Fragments.GraphFragment;
 import com.gerbendenboer.toptabtest.Data.CSVReader;
 import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
@@ -15,6 +18,8 @@ import com.gerbendenboer.toptabtest.Fragments.CalendarFragment;
 import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.GroupBarChartFragment;
+import com.gerbendenboer.toptabtest.Fragments.GroupBarChartMenuFragment;
+
 
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
     private Toolbar toolbar;
@@ -49,12 +54,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
         viewPagerAdapter.addFragments(new LineChartFragment(), "Graph");
-//        viewPagerAdapter.addFragments(new BicycleFragment(), "");
+//        viewPagerAdapter.addFragments(new GraphFragment(), "Grafiek");
+        //viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Grouped");
+//        viewPagerAdapter.addFragments(new DiagramFragment(), "Diagram");
+//        viewPagerAdapter.addFragments(new BicycleFragment(), "Bicycle");
         viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
-//        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
-//        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
+//        viewPagerAdapter.addFragments(new CalendarFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
-        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Grouped");
+        viewPagerAdapter.addFragments(new GroupBarChartMenuFragment(), "BCMenu");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);

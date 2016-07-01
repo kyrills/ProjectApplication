@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class SingleBarChartFragment extends Fragment {
 
-    Context cont;
+    private Context cont;
     private BarData data;
     private int topFiveIndex;
 

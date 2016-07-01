@@ -1,8 +1,9 @@
 package com.gerbendenboer.toptabtest.Factory;
 
 
-import android.widget.ToggleButton;
+import android.content.Intent;
+import android.widget.Button;
 
 public interface IButton {
-    public void action(ToggleButton toggleButton);
+    public void action(Button button, Button.OnClickListener x);
 }
