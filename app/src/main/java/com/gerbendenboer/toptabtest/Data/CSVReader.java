@@ -258,7 +258,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                 if (fietsperbuurt[7].contains("Overschie"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurt[9].regionMatches(true, 0, "2", 0, 1)){
                         OverschieFebruari += 1.0;}
                     else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
@@ -285,9 +285,6 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         kCrooswijkApril += 1.0;}
                     else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "10", 0, 1)){
-                        kCrooswijkOktober += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         kCrooswijkJuni += 1.0;}
                     else
@@ -300,6 +297,8 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
                         kCrooswijkSeptember += 1.0;
                     }
+                    if(fietsperbuurt[9].regionMatches(true, 0, "10", 0, 1)){
+                        kCrooswijkOktober += 1.0;}
                     else
                         kCrooswijkOverig += 1.0;
 
