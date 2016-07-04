@@ -13,6 +13,9 @@ public class MonthPNeighbourhood {
     public float CentrumAugustus = 0;
     public float CentrumSeptember = 0;
     public float CharloisJuni = 0;
+    public float CharloisMei = 0;
+    public float CharloisDecember = 0;
+    public float CharloisJanuari = 0;
     public float CharloisJuli = 0;
     public float CharloisOverig = 0;
     public float CharloisApril = 0;
@@ -24,18 +27,28 @@ public class MonthPNeighbourhood {
     public float DelfshavenApril = 0;
     public float DelfshavenAugustus = 0;
     public float DelfshavenSeptember = 0;
+    public float DelfshavenJanuari = 0;
+    public float DelfshavenMei = 0;
+    public float DelfshavenNovember = 0;
     public float FeijenoordJuni = 0;
     public float FeijenoordJuli = 0;
     public float FeijenoordOverig = 0;
     public float FeijenoordApril = 0;
     public float FeijenoordAugustus = 0;
     public float FeijenoordSeptember = 0;
+    public float FeijenoordMaart = 0;
+    public float FeijenoordOktober = 0;
+    public float FeijenoordNovember = 0;
     public float NoordJuni = 0;
     public float NoordJuli = 0;
     public float NoordOverig = 0;
     public float NoordApril = 0;
     public float NoordAugustus = 0;
     public float NoordSeptember = 0;
+    public float NoordJanuari = 0;
+    public float NoordFebruari = 0;
+    public float NoordMaart = 0;
+    public float NoordMei = 0;
     public float HillegersbergJuni = 0;
     public float HillegersbergJuli = 0;
     public float HillegersbergOverig = 0;
@@ -48,6 +61,8 @@ public class MonthPNeighbourhood {
     public float OverschieApril = 0;
     public float OverschieAugustus = 0;
     public float OverschieSeptember = 0;
+    public float OverschieFebruari = 0;
+    public float kCrooswijkOktober = 0;
     public float kCrooswijkJuni = 0;
     public float kCrooswijkJuli = 0;
     public float kCrooswijkOverig = 0;
@@ -95,9 +110,15 @@ public class MonthPNeighbourhood {
     public float getCharloisJuni() { return CharloisJuni;}
     public float getCharloisJuli() {return CharloisJuli;}
     public float getCharloisOverig() {return CharloisOverig;}
+    public float getCharloisJanuari() {return CharloisJanuari;}
+    public float getCharloisMei() {return CharloisMei;}
+    public float getCharloisDecember() {return CharloisDecember;}
     public float getCharloisApril() { return CharloisApril;}
     public float getCharloisAugustus() {return CharloisAugustus;}
     public float getCharloisSeptember() {return CharloisSeptember;}
+    public float getDelfshavenJanuari() { return DelfshavenJanuari;}
+    public float getDelfshavenMei() {return DelfshavenMei;}
+    public float getDelfshavenNovember() {return DelfshavenNovember;}
     public float getDelfshavenJuni() { return DelfshavenJuni;}
     public float getDelfshavenJuli() {return DelfshavenJuli;}
     public float getDelfshavenOverig() {return DelfshavenOverig;}
@@ -110,6 +131,15 @@ public class MonthPNeighbourhood {
     public float getFeijenoordApril() { return FeijenoordApril;}
     public float getFeijenoordAugustus() {return FeijenoordAugustus;}
     public float getFeijenoordSeptember() {return FeijenoordSeptember;}
+    public float getFeijenoordMaart() { return FeijenoordMaart;}
+    public float getFeijenoordOktober() {return FeijenoordOktober;}
+    public float getFeijenoordNovember() {return FeijenoordNovember;}
+
+    public float getNoordJanuari() { return NoordJanuari;}
+    public float getNoordFebruari() {return NoordFebruari;}
+    public float getNoordMaart() {return NoordMaart;}
+    public float getNoordMei() { return NoordMei;}
+
     public float getNoordJuni() { return NoordJuni;}
     public float getNoordJuli() {return NoordJuli;}
     public float getNoordOverig() {return NoordOverig;}
@@ -128,6 +158,8 @@ public class MonthPNeighbourhood {
     public float getOverschieApril() { return OverschieApril;}
     public float getOverschieAugustus() {return OverschieAugustus;}
     public float getOverschieSeptember() {return OverschieSeptember;}
+    public float getOverschieFebruari() {return OverschieFebruari;}
+    public float getkCrooswijkOktober() { return kCrooswijkOktober;}
     public float getkCrooswijkJuni() { return kCrooswijkJuni;}
     public float getkCrooswijkJuli() {return kCrooswijkJuli;}
     public float getkCrooswijkOverig() {return kCrooswijkOverig;}
