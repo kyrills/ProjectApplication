@@ -3,7 +3,7 @@ package com.gerbendenboer.toptabtest.Data;
 /**
  * Created by Samuel on 01-07-16.
  */
-public class MonthPNeighbourhood {
+public class MonthPNeighbourhood extends MonthPNeightbourhoodD {
 
     public float CentrumJuni = 0;
     public float CentrumJuli = 0;

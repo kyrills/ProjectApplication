@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ListView listView;
     public static CSVReader Fietstrommels;
     public static CSVReader RunFietsPerBuurt;
+    public static CSVReader RunFietsDiefstalPerBuurt;
     public static CSVReader DiefstalMaand;
     public static CSVReader Brands;
     public static CSVReader Color;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
 
         RunFietsPerBuurt = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
         RunFietsPerBuurt.runFietsPerBuurt();
+
+        RunFietsPerBuurt = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+        RunFietsPerBuurt.runFietsDiefstalPerBuurt();
 
         DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
         DiefstalMaand.runDiefstal();
