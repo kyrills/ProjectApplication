@@ -61,14 +61,92 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuni(), 1));
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumAugustus(), 2));
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuli(), 3));
-        Diefstal.add(new BarEntry(120f, 4));
-        Diefstal.add(new BarEntry(90f, 5));
-        Diefstal.add(new BarEntry(80f, 6));
-        Diefstal.add(new BarEntry(120f, 7));
-        Diefstal.add(new BarEntry(90f, 8));
-        Diefstal.add(new BarEntry(80f, 9));
-        Diefstal.add(new BarEntry(120f, 10));
-        Diefstal.add(new BarEntry(90f, 11));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumOverig(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCharloisSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getDelfshavenSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getFeijenoordSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getNoordSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHillegersbergSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOverschieSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getkCrooswijkSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getPernisSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getIJsselmondeSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getWestSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getOmoordSeptember(), 5));
+
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietOverig(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietJuli(), 3));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietAugustus(), 4));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getHoogvlietSeptember(), 5));
 
         ArrayList<BarEntry> Trommels = new ArrayList<>();
         Trommels.add(new BarEntry(60f, 0));
