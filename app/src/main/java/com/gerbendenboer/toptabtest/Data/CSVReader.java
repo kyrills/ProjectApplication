@@ -246,7 +246,7 @@ public class CSVReader extends Colors implements IDataReader {
                         OverschieOverig += 1.0;
 
                 Overschie += 1.0;
-                if (fietsperbuurt[7].contains("Kralingen/Crooswijk"))
+                if (fietsperbuurt[7].contains("Kralingen-Crooswijk"))
 
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         kCrooswijkApril += 1.0;}
@@ -415,6 +415,15 @@ public class CSVReader extends Colors implements IDataReader {
                 if (fietsperbuurtD[1].contains("CENTRUM"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DCentrumJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DCentrumFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DCentrumMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                         DCentrumApril += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("5")){
@@ -432,12 +441,27 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurtD[2].contains("9")) {
                         DCentrumSeptember += 1.0;
                     }
+                    if(fietsperbuurtD[2].contains("4")){
+                        DCentrumOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DCentrumNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DCentrumDecember += 1.0;}
+                    else
 
 
                 if (fietsperbuurtD[1].contains("CHARLOIS"))
 
                     if(fietsperbuurtD[2].contains("1")){
                         DCharloisJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DCharloisFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("3")){
+                        DCharloisMaart += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("4")){
                         DCharloisApril += 1.0;}
@@ -458,6 +482,12 @@ public class CSVReader extends Colors implements IDataReader {
                         DCharloisSeptember += 1.0;
                     }
                     else
+                    if(fietsperbuurtD[2].contains("10")){
+                        DCharloisOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("11")){
+                        DCharloisNovember += 1.0;}
+                    else
                     if(fietsperbuurtD[2].contains("12")) {
                         DCharloisDecember += 1.0;
                     }
@@ -466,8 +496,14 @@ public class CSVReader extends Colors implements IDataReader {
 
                 if (fietsperbuurtD[1].contains("DELFSHAVEN"))
 
-                if(fietsperbuurtD[2].contains("1")){
-                    DDelfshavenJanuari += 1.0;}
+                    if(fietsperbuurtD[2].contains("1")){
+                        DDelfshavenJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("1")){
+                        DDelfshavenFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("1")){
+                        DDelfshavenMaart += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("4")){
                         DDelfshavenApril += 1.0;}
@@ -487,20 +523,38 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurtD[2].contains("9")) {
                         DDelfshavenSeptember += 1.0;
                     }
+                    if(fietsperbuurtD[2].contains("1")){
+                        DDelfshavenOktober += 1.0;}
+                    else
                     if(fietsperbuurtD[2].contains("11")) {
                         DDelfshavenNovember += 1.0;
                     }
+                    else
+                    if(fietsperbuurtD[2].contains("1")){
+                        DDelfshavenDecember += 1.0;}
                     else
                     DelfshavenOverig += 1.0;
 
                 if (fietsperbuurtD[1].contains("FEIJENOORD"))
 
                     if(fietsperbuurtD[2].contains("3")) {
+                        DFeijenoordJanuari += 1.0;
+                    }
+                    else
+                    if(fietsperbuurtD[2].contains("3")) {
+                        DFeijenoordFebruari += 1.0;
+                    }
+                    else
+                    if(fietsperbuurtD[2].contains("3")) {
                         DFeijenoordMaart += 1.0;
                     }
                     else
                     if(fietsperbuurtD[2].contains("4")){
                         DFeijenoordApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("3")) {
+                        DFeijenoordMei += 1.0;
+                    }
                     else
                     if(fietsperbuurtD[2].contains("6")){
                         DFeijenoordJuni += 1.0;}
@@ -523,9 +577,10 @@ public class CSVReader extends Colors implements IDataReader {
                         DFeijenoordNovember += 1.0;
                     }
                     else
-                            FeijenoordOverig += 1.0;
-
-                            Feijenoord += 1.0;
+                    if(fietsperbuurtD[2].contains("3")) {
+                        DFeijenoordDecember += 1.0;
+                    }
+                    else
 
                 if (fietsperbuurtD[1].contains("NOORD"))
 
@@ -557,13 +612,35 @@ public class CSVReader extends Colors implements IDataReader {
                     DNoordSeptember += 1.0;
                     }
                     else
-                    NoordOverig += 1.0;
+                    if(fietsperbuurtD[2].contains("9")) {
+                        DNoordOktober += 1.0;
+                    }
+                    else
+                    if(fietsperbuurtD[2].contains("9")) {
+                        DNoordNovember += 1.0;
+                    }
+                    else
+                    if(fietsperbuurtD[2].contains("9")) {
+                        DNoordDecember += 1.0;
+                    }
+                    else
 
-                    Noord += 1.0;
                 if (fietsperbuurtD[1].contains("HILLEGERSBERG"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DHillegersbergApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DHillegersbergJuni += 1.0;}
@@ -578,7 +655,16 @@ public class CSVReader extends Colors implements IDataReader {
                     DHillegersbergSeptember += 1.0;
                     }
                     else
-                    DHillegersbergOverig += 1.0;
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHillegersbergDecember += 1.0;}
+                    else
+
 
                 //Hillegersberg += 1.0;
 
@@ -586,10 +672,19 @@ public class CSVReader extends Colors implements IDataReader {
                 if (fietsperbuurtD[1].contains("OVERSCHIE"))
 
                     if(fietsperbuurtD[2].contains("2")){
+                        DOverschieJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
                     DOverschieFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DOverschieMaart += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("4")){
                     DOverschieApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DOverschieMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DOverschieJuni += 1.0;}
@@ -604,13 +699,34 @@ public class CSVReader extends Colors implements IDataReader {
                     DOverschieSeptember += 1.0;
                     }
                     else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DOverschieOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DOverschieNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("2")){
+                        DOverschieDecember += 1.0;}
+                    else
                     OverschieOverig += 1.0;
 
                     Overschie += 1.0;
                 if (fietsperbuurtD[1].contains("CROOSWIJK"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                         DkCrooswijkApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                         DkCrooswijkJuni += 1.0;}
@@ -624,15 +740,33 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurtD[2].contains("9")) {
                         DkCrooswijkSeptember += 1.0;
                     }
-                if(fietsperbuurtD[2].contains("10")){
-                    DkCrooswijkOktober += 1.0;}
-                else
+                    if(fietsperbuurtD[2].contains("10")){
+                        DkCrooswijkOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkDecember += 1.0;}
+                    else
                     //kCrooswijkOverig += 1.0;
 
                 if (fietsperbuurtD[1].contains("KRALINGEN"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DkCrooswijkApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DkCrooswijkJuni += 1.0;}
@@ -649,14 +783,30 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurtD[2].contains("10")){
                     DkCrooswijkOktober += 1.0;}
                     else
-                    kCrooswijkOverig += 1.0;
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkDecember += 1.0;}
+                    else
 
-                //kCrooswijk += 1.0;
 
                 if (fietsperbuurtD[1].contains("PERNIS"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DPernisJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DPernisApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DPernisJuni += 1.0;}
@@ -671,6 +821,15 @@ public class CSVReader extends Colors implements IDataReader {
                     DPernisSeptember += 1.0;
                     }
                     else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DPernisDecember += 1.0;}
+                    else
                     //PernisOverig += 1.0;
 
                 //Pernis += 1.0;
@@ -678,7 +837,19 @@ public class CSVReader extends Colors implements IDataReader {
                 if (fietsperbuurtD[1].contains("IJSSELMONDE"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DIJsselmondeApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DIJsselmondeJuni += 1.0;}
@@ -693,14 +864,35 @@ public class CSVReader extends Colors implements IDataReader {
                     DIJsselmondeSeptember += 1.0;
                     }
                     else
-                    //IJsselmondeOverig += 1.0;
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DIJsselmondeDecember += 1.0;}
+                    else
+
 
 
 
                 if (fietsperbuurtD[1].contains("WEST"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DWestJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DWestApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DWestJuni += 1.0;}
@@ -715,6 +907,15 @@ public class CSVReader extends Colors implements IDataReader {
                     DWestSeptember += 1.0;
                     }
                     else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DWestDecember += 1.0;}
+                    else
                     //WestOverig += 1.0;
 
                     //West += 1.0;
@@ -722,7 +923,19 @@ public class CSVReader extends Colors implements IDataReader {
                 if (fietsperbuurtD[1].contains("OMOORD"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DOmoordJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DOmoordApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DOmoordJuni += 1.0;}
@@ -737,6 +950,15 @@ public class CSVReader extends Colors implements IDataReader {
                     DOmoordSeptember += 1.0;
                     }
                     else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DOmoordDecember += 1.0;}
+                    else
                     //OmoordOverig += 1.0;
 
                     //Omoord += 1.0;
@@ -745,7 +967,19 @@ public class CSVReader extends Colors implements IDataReader {
                 if (fietsperbuurtD[1].contains("HOOGVLIET"))
 
                     if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietJanuari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietFebruari += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietMaart += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
                     DHoogvlietApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietMei += 1.0;}
                     else
                     if(fietsperbuurtD[2].contains("6")){
                     DHoogvlietJuni += 1.0;}
@@ -759,6 +993,15 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurtD[2].contains("9")) {
                     DHoogvlietSeptember += 1.0;
                     }
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietOktober += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietNovember += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("4")){
+                        DHoogvlietDecember += 1.0;}
                     else
                     DHoogvlietOverig += 1.0;
 
