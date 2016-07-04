@@ -34,7 +34,7 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
         barChart.setData(data);
         barChart.animateY(2500);
         barChart.setDescriptionPosition(1000, 1400);
-        //barChart.zoom(2,2,50,50);
+//        barChart.zoom(2,2,50,50);
     }
 
     @Override

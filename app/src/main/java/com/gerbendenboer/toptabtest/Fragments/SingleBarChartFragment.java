@@ -111,7 +111,7 @@ public class SingleBarChartFragment extends Fragment {
             }
         }
 
-        BarDataSet barDataSet1 = new BarDataSet(group1, "Fietstrommels");
+        BarDataSet barDataSet1 = new BarDataSet(group1, "Amount of bike containers");
         barDataSet1.setColor(Color.parseColor("#e62e00"));
 
         data = new BarData(labels, barDataSet1);

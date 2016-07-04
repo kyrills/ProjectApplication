@@ -1,4 +1,4 @@
-package com.gerbendenboer.toptabtest;
+package com.gerbendenboer.toptabtest.Data;
 
 public interface IDataReader {
 

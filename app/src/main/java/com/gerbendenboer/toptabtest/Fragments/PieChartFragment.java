@@ -45,14 +45,14 @@ public class PieChartFragment extends Fragment {
         pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChartBrand.setData(pieDataBrand); //set pieData into chart
         pieChartBrand.setDescription("Most stolen bike brands");
-        pieChartBrand.setDescriptionColor(Color.WHITE);
+        pieChartBrand.setDescriptionColor(Color.BLACK);
         pieChartBrand.animateY(1500);
 //        pieChartBrand.setTouchEnabled(false);
 
         pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
         pieChartColour.setData(pieDataColour);
         pieChartColour.setDescription("Most stolen bikes depending on colour");
-        pieChartColour.setDescriptionColor(Color.WHITE);
+        pieChartColour.setDescriptionColor(Color.BLACK);
         pieChartColour.animateY(1500);
 //        pieChartColour.setTouchEnabled(false);
     }

@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
 //        viewPagerAdapter.addFragments(new CalendarFragment(), "Calender");
         viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
-        viewPagerAdapter.addFragments(new GroupBarChartMenuFragment(), "BCMenu");
+        viewPagerAdapter.addFragments(new GroupBarChartMenuFragment(), "Grouped");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);

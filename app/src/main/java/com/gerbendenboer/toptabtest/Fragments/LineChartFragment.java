@@ -50,21 +50,21 @@ public class LineChartFragment extends Fragment{
         entries.add(new Entry(MainActivity.DiefstalMaand.getNovember(), 10));
         entries.add(new Entry(MainActivity.DiefstalMaand.getDecember(), 11));
 
-        LineDataSet dataset = new LineDataSet(entries, "Diefstal per maand");
+        LineDataSet dataset = new LineDataSet(entries, "Amount of stolen bicycles per month");
 
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("J");
-        labels.add("F");
-        labels.add("M");
-        labels.add("A");
-        labels.add("M");
-        labels.add("J");
-        labels.add("J");
-        labels.add("A");
-        labels.add("S");
-        labels.add("O");
-        labels.add("N");
-        labels.add("D");
+        labels.add("Jan");
+        labels.add("Feb");
+        labels.add("Mar");
+        labels.add("Apr");
+        labels.add("May");
+        labels.add("Jun");
+        labels.add("Jul");
+        labels.add("Aug");
+        labels.add("Sep");
+        labels.add("Oct");
+        labels.add("Nov");
+        labels.add("Dec");
 
         data = new LineData(labels, dataset);
         dataset.setColor(Color.parseColor("#e62e00"));

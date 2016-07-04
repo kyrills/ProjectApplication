@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,12 +82,6 @@ public class GroupBarChartMenuFragment extends Fragment {
         hoogvliet.action(hoogvlietButton, btnOnClickListener);
     }
 
-    public void showToast(String area){
-        Toast.makeText(cont, "You selected " + area,
-                Toast.LENGTH_SHORT).show();
-    }
-
-
     Button.OnClickListener btnOnClickListener = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
@@ -94,47 +89,48 @@ public class GroupBarChartMenuFragment extends Fragment {
 
             if (v == centrumButton) {
                 newFragment = new GroupBarChartFragment();
-                showToast("Centrum");
+                showSelectedArea("Centrum");
             } else if(v == charloisButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Charlois");
+                showSelectedArea("Charlois");
             } else if (v == delfshavenButton) {
                 newFragment = new GroupBarChartFragment();
-                showToast("Delfshaven");
+                showSelectedArea("Delfshaven");
             } else if (v == feijenoordButton) {
                 newFragment = new GroupBarChartFragment();
-                showToast("Feijenoord");
+                showSelectedArea("Feijenoord");
             } else if (v == noordButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Noord");
+                showSelectedArea("Noord");
             } else if (v == hillegersbergButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Hillegersberg");
+                showSelectedArea("Hillegersberg");
             } else if (v == overschieButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Overschie");
+                showSelectedArea("Overschie");
             } else if (v == kcrooswijkButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("kCrooswijk");
+                showSelectedArea("kCrooswijk");
             } else if (v == pernisButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Pernis");
+                showSelectedArea("Pernis");
             } else if (v == ijsselmondeButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("IJsselmonde");
+                showSelectedArea("IJsselmonde");
             } else if (v == westButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("West");
+                showSelectedArea("West");
             } else if (v == omoordButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Omoord");
+                showSelectedArea("Omoord");
             } else if (v == hoogvlietButton){
                 newFragment = new GroupBarChartFragment();
-                showToast("Hoogvliet");
+                showSelectedArea("Hoogvliet");
             } else {
                 newFragment = new GroupBarChartFragment();
             }
 
+            // Load the new chart depending on the button pressed
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.myFragment, newFragment);
             fragmentTransaction.addToBackStack(null);
@@ -142,12 +138,9 @@ public class GroupBarChartMenuFragment extends Fragment {
         }
     };
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -155,5 +148,10 @@ public class GroupBarChartMenuFragment extends Fragment {
         cont = inflater.getContext();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_groupedbarchartmenu, container, false);
+    }
+
+    public void showSelectedArea(String area) {
+        Toast.makeText(cont, "You selected " + area,
+                Toast.LENGTH_SHORT).show();
     }
 }
