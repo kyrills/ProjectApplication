@@ -12,13 +12,13 @@ android:layout_height="match_parent">
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartBrand"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="500dp"
-            android:layout_marginTop="-75dp"/>
+            android:layout_marginTop="-65dp"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartColour"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="500dp"
             android:layout_marginTop="-60dp"/>
     </LinearLayout>

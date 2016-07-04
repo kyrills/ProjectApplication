@@ -21,9 +21,7 @@ public class GroupBarChartMenuFragment extends Fragment {
     Button kcrooswijkButton, pernisButton, ijsselmondeButton, westButton, omoordButton, hoogvlietButton;
     Context cont;
 
-    public GroupBarChartMenuFragment() {
-
-    }
+    public GroupBarChartMenuFragment() {}
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -88,46 +86,46 @@ public class GroupBarChartMenuFragment extends Fragment {
             Fragment newFragment;
 
             if (v == centrumButton) {
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Centrum");
                 showSelectedArea("Centrum");
             } else if(v == charloisButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Charlois");
                 showSelectedArea("Charlois");
             } else if (v == delfshavenButton) {
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Delfshaven");
                 showSelectedArea("Delfshaven");
             } else if (v == feijenoordButton) {
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Feijenoord");
                 showSelectedArea("Feijenoord");
             } else if (v == noordButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Noord");
                 showSelectedArea("Noord");
             } else if (v == hillegersbergButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Hillegersberg");
                 showSelectedArea("Hillegersberg");
             } else if (v == overschieButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Overschie");
                 showSelectedArea("Overschie");
             } else if (v == kcrooswijkButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("kCrooswijk");
                 showSelectedArea("kCrooswijk");
             } else if (v == pernisButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Pernis");
                 showSelectedArea("Pernis");
             } else if (v == ijsselmondeButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("IJsselmonde");
                 showSelectedArea("IJsselmonde");
             } else if (v == westButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("West");
                 showSelectedArea("West");
             } else if (v == omoordButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Omoord");
                 showSelectedArea("Omoord");
             } else if (v == hoogvlietButton){
-                newFragment = new GroupBarChartFragment();
+                newFragment = new GroupBarChartFragment("Hoogvliet");
                 showSelectedArea("Hoogvliet");
-            } else {
-                newFragment = new GroupBarChartFragment();
+            }else {
+                newFragment = new GroupBarChartFragment("");
             }
 
             // Load the new chart depending on the button pressed
