@@ -9,6 +9,7 @@ public class MonthPNeighbourhood {
     public float CentrumJuli = 0;
     public float CentrumOverig = 0;
     public float CentrumApril = 0;
+    public float CentrumMei = 0;
     public float CentrumAugustus = 0;
     public float CentrumSeptember = 0;
     public float CharloisJuni = 0;
@@ -84,6 +85,7 @@ public class MonthPNeighbourhood {
     public float HoogvlietAugustus = 0;
     public float HoogvlietSeptember = 0;
 
+    public float getCentrumMei() {return CentrumMei;}
     public float getCentrumJuni() {return CentrumJuni;}
     public float getCentrumJuli() {return CentrumJuli;}
     public float getCentrumOverig() {return CentrumOverig;}

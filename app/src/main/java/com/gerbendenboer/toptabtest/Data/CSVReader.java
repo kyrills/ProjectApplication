@@ -90,6 +90,9 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         CentrumApril += 1.0;}
                     else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "5", 0, 1)){
+                        CentrumMei += 1.0;}
+                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         CentrumJuni += 1.0;}
                     else
