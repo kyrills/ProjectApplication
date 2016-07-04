@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
@@ -55,38 +56,38 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
         labels.add("N");
         labels.add("D");
 
-        ArrayList<BarEntry> group1 = new ArrayList<>();
-        group1.add(new BarEntry(30f, 0));
-        group1.add(new BarEntry(120f, 1));
-        group1.add(new BarEntry(90f, 2));
-        group1.add(new BarEntry(80f, 3));
-        group1.add(new BarEntry(120f, 4));
-        group1.add(new BarEntry(90f, 5));
-        group1.add(new BarEntry(80f, 6));
-        group1.add(new BarEntry(120f, 7));
-        group1.add(new BarEntry(90f, 8));
-        group1.add(new BarEntry(80f, 9));
-        group1.add(new BarEntry(120f, 10));
-        group1.add(new BarEntry(90f, 11));
+        ArrayList<BarEntry> Diefstal = new ArrayList<>();
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumApril(), 0));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuni(), 1));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumAugustus(), 2));
+        Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuli(), 3));
+        Diefstal.add(new BarEntry(120f, 4));
+        Diefstal.add(new BarEntry(90f, 5));
+        Diefstal.add(new BarEntry(80f, 6));
+        Diefstal.add(new BarEntry(120f, 7));
+        Diefstal.add(new BarEntry(90f, 8));
+        Diefstal.add(new BarEntry(80f, 9));
+        Diefstal.add(new BarEntry(120f, 10));
+        Diefstal.add(new BarEntry(90f, 11));
 
-        ArrayList<BarEntry> group2 = new ArrayList<>();
-        group2.add(new BarEntry(60f, 0));
-        group2.add(new BarEntry(80f, 1));
-        group2.add(new BarEntry(150f, 2));
-        group2.add(new BarEntry(60f, 3));
-        group2.add(new BarEntry(80f, 4));
-        group2.add(new BarEntry(155f, 5));
-        group2.add(new BarEntry(60f, 6));
-        group2.add(new BarEntry(80f, 7));
-        group2.add(new BarEntry(105f, 8));
-        group2.add(new BarEntry(60f, 9));
-        group2.add(new BarEntry(80f, 10));
-        group2.add(new BarEntry(150f, 11));
+        ArrayList<BarEntry> Trommels = new ArrayList<>();
+        Trommels.add(new BarEntry(60f, 0));
+        Trommels.add(new BarEntry(80f, 1));
+        Trommels.add(new BarEntry(150f, 2));
+        Trommels.add(new BarEntry(60f, 3));
+        Trommels.add(new BarEntry(80f, 4));
+        Trommels.add(new BarEntry(155f, 5));
+        Trommels.add(new BarEntry(60f, 6));
+        Trommels.add(new BarEntry(80f, 7));
+        Trommels.add(new BarEntry(105f, 8));
+        Trommels.add(new BarEntry(60f, 9));
+        Trommels.add(new BarEntry(80f, 10));
+        Trommels.add(new BarEntry(150f, 11));
 
-        BarDataSet barDataSet1 = new BarDataSet(group1, "Diefstal");
+        BarDataSet barDataSet1 = new BarDataSet(Diefstal, "Diefstal");
         barDataSet1.setColor(Color.parseColor("#e62e00"));
 
-        BarDataSet barDataSet2 = new BarDataSet(group2, "Fietstrommels");
+        BarDataSet barDataSet2 = new BarDataSet(Trommels, "Fietstrommels");
         barDataSet2.setColor(Color.parseColor("#cccccc"));
 
         ArrayList<IBarDataSet> dataset = new ArrayList<>();

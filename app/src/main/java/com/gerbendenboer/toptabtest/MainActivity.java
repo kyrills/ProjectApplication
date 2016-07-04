@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
     public static CSVReader Fietstrommels;
+    public static CSVReader RunFietsPerBuurt;
     public static CSVReader DiefstalMaand;
     public static CSVReader Brands;
+    public static CSVReader Color;
 
 
     @Override
@@ -40,8 +42,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
         Fietstrommels.runFietstrommels();
 
+        RunFietsPerBuurt = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+        RunFietsPerBuurt.runFietsPerBuurt();
+
         DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
         DiefstalMaand.runDiefstal();
+
+        Color = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
+        Color.runColor();
 
         Brands = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
         Brands.runBrand();
