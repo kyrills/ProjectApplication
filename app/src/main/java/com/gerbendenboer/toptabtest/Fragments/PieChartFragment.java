@@ -14,6 +14,7 @@ import com.gerbendenboer.toptabtest.Factory.IButton;
 import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -27,8 +28,6 @@ public class PieChartFragment extends Fragment {
     private PieData pieDataColour;
     private PieData pieDataBrand;
     public float topFiveIndex;
-//    private IButton toggleKnoppie;
-//    private ToggleButton toggleKnop;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,16 +40,20 @@ public class PieChartFragment extends Fragment {
 
         pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChartBrand.setData(pieDataBrand); //set pieData into chart
-        pieChartBrand.setDescription("Description");
+        pieChartBrand.setDescription("Most stolen bike brands");
         pieChartBrand.animateY(1500);
         pieChartBrand.setTouchEnabled(false);
+        Legend legendBrand = pieChartBrand.getLegend();
+        legendBrand.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
+
 
         pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
         pieChartColour.setData(pieDataColour);
-        pieChartColour.setDescription("Desc");
+        pieChartColour.setDescription("Most stolen bikes depending on colour");
         pieChartColour.animateY(1500);
         pieChartColour.setTouchEnabled(false);
-
+        Legend legendColour = pieChartColour.getLegend();
+        legendColour.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
     }
 
     @Override
@@ -58,10 +61,7 @@ public class PieChartFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         topFiveIndex = 0;
-
         MainActivity.Brands.runBrand();
-
-
 
         ArrayList<Entry> entriesColour = new ArrayList<>();
         entriesColour.add(new Entry(MainActivity.Color.getBLAUW(), 8));
@@ -83,37 +83,32 @@ public class PieChartFragment extends Fragment {
         entriesBrand.add(new Entry(MainActivity.Brands.getYAMAHA(), 6));
         entriesBrand.add(new Entry(MainActivity.Brands.getOVERIG(), 7));
 
-
         PieDataSet dataSetColour = new PieDataSet(entriesColour, "");
-        ArrayList<String> labels1 = new ArrayList<String>();
-        labels1.add("Blauw");
-        labels1.add("Chroom");
-        labels1.add("Grijs");
-        labels1.add("Groen");
-        labels1.add("Rood");
-        labels1.add("Zilver");
-        labels1.add("Zwart");
-        labels1.add("Onbekend");
-
+        ArrayList<String> labelsColour = new ArrayList<String>();
+        labelsColour.add("Blue");
+        labelsColour.add("Chrome");
+        labelsColour.add("Grey");
+        labelsColour.add("Green");
+        labelsColour.add("Red");
+        labelsColour.add("Silver");
+        labelsColour.add("Black");
+        labelsColour.add("Unknown");
 
         PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"TFHTFTFFTFTFT");
-        ArrayList<String> labels2 = new ArrayList<String>();
-        labels2.add("Batavus");
-        labels2.add("Gazelle");
-        labels2.add("Giant");
-        labels2.add("Peugeot");
-        labels2.add("Sparta");
-        labels2.add("Union");
-        labels2.add("Yamaha");
-        labels2.add("Overig");
+        ArrayList<String> labelsBrand = new ArrayList<String>();
+        labelsBrand.add("Batavus");
+        labelsBrand.add("Gazelle");
+        labelsBrand.add("Giant");
+        labelsBrand.add("Peugeot");
+        labelsBrand.add("Sparta");
+        labelsBrand.add("Union");
+        labelsBrand.add("Yamaha");
+        labelsBrand.add("Unknown");
 
-
-
-        pieDataColour = new PieData(labels1, dataSetColour);
-        pieDataBrand = new PieData(labels2, dataSetBrand);
+        pieDataColour = new PieData(labelsColour, dataSetColour);
+        pieDataBrand = new PieData(labelsBrand, dataSetBrand);
         dataSetColour.setColors(My_Colours);
         dataSetBrand.setColors(My_Colours);
-
     }
 
     public static final int[] My_Colours = {
