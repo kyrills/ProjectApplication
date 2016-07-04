@@ -280,7 +280,7 @@ public class CSVReader extends Colors implements IDataReader {
                         OverschieOverig += 1.0;
 
                 Overschie += 1.0;
-                if (fietsperbuurt[7].contains("Kralingen/Crooswijk"))
+                if (fietsperbuurt[7].contains("Kralingen-Crooswijk"))
 
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         kCrooswijkApril += 1.0;}
@@ -417,11 +417,11 @@ public class CSVReader extends Colors implements IDataReader {
                 Hoogvliet += 1.0;
             }
 
-            System.out.println(NoordOverig);
+            System.out.println(kCrooswijkApril);
 
-            System.out.println(FeijenoordOverig);
+            System.out.println(kCrooswijkAugustus);
 
-            System.out.println(DelfshavenOverig);
+            System.out.println(kCrooswijkJuni);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
