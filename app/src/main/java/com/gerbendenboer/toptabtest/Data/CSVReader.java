@@ -454,114 +454,114 @@ public class CSVReader extends Colors implements IDataReader {
 
                 String[] fietsperbuurtD = line.split(cvsSplitBy);
 
-                if (fietsperbuurtD[7].contains("Centrum"))
+                if (fietsperbuurtD[0].contains("Centrum"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DCentrumApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "5", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "5", 0, 1)){
                         DCentrumMei += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DCentrumJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DCentrumJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DCentrumAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DCentrumSeptember += 1.0;
                     }
 
 
-                if (fietsperbuurtD[7].contains("Charlois"))
+                if (fietsperbuurtD[0].contains("Charlois"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "1", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "1", 0, 1)){
                         DCharloisJanuari += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DCharloisApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "5", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "5", 0, 1)){
                         DCharloisMei += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DCharloisJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DCharloisJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DCharloisAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DCharloisSeptember += 1.0;
                     }
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "12", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "12", 0, 1)) {
                         DCharloisDecember += 1.0;
                     }
                     else
                         CharloisOverig += 1.0;
 
-                if (fietsperbuurtD[7].contains("Delfshaven"))
+                if (fietsperbuurtD[0].contains("Delfshaven"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "1", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "1", 0, 1)){
                         DDelfshavenJanuari += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DDelfshavenApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "5", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "5", 0, 1)){
                         DDelfshavenMei += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DDelfshavenJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DDelfshavenJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DDelfshavenAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DDelfshavenSeptember += 1.0;
                     }
-                if(fietsperbuurtD[9].regionMatches(true, 0, "11", 0, 1)) {
+                if(fietsperbuurtD[2].regionMatches(true, 0, "11", 0, 1)) {
                     DDelfshavenNovember += 1.0;
                 }
                 else
                     DelfshavenOverig += 1.0;
 
-                if (fietsperbuurtD[7].contains("Feijenoord"))
+                if (fietsperbuurtD[0].contains("Feijenoord"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "3", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "3", 0, 1)) {
                         DFeijenoordMaart += 1.0;
                     }
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DFeijenoordApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DFeijenoordJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DFeijenoordJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DFeijenoordAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DFeijenoordSeptember += 1.0;
                     }
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "10", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "10", 0, 1)) {
                         DFeijenoordOktober += 1.0;
                     }
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "11", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "11", 0, 1)) {
                         DFeijenoordNovember += 1.0;
                     }
                     else
@@ -569,54 +569,54 @@ public class CSVReader extends Colors implements IDataReader {
 
                 Feijenoord += 1.0;
 
-                if (fietsperbuurtD[7].contains("Noord"))
+                if (fietsperbuurtD[0].contains("Noord"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "1", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "1", 0, 1)){
                         DNoordJanuari += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "2", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "2", 0, 1)){
                         DNoordFebruari += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "3", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "3", 0, 1)){
                         DNoordMaart += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DNoordApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "5", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "5", 0, 1)){
                         DNoordMei += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DNoordJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DNoordJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DNoordAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DNoordSeptember += 1.0;
                     }
                     else
                         NoordOverig += 1.0;
 
                 Noord += 1.0;
-                if (fietsperbuurtD[7].contains("Hillegersberg"))
+                if (fietsperbuurtD[0].contains("Hillegersberg"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DHillegersbergApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DHillegersbergJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DHillegersbergJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DHillegersbergAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DHillegersbergSeptember += 1.0;
                     }
                     else
@@ -625,69 +625,69 @@ public class CSVReader extends Colors implements IDataReader {
                 //Hillegersberg += 1.0;
 
 
-                if (fietsperbuurtD[7].contains("Overschie"))
+                if (fietsperbuurtD[0].contains("Overschie"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "2", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "2", 0, 1)){
                         DOverschieFebruari += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DOverschieApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DOverschieJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DOverschieJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DOverschieAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DOverschieSeptember += 1.0;
                     }
                     else
                         OverschieOverig += 1.0;
 
                 Overschie += 1.0;
-                if (fietsperbuurtD[7].contains("Kralingen-Crooswijk"))
+                if (fietsperbuurtD[0].contains("Kralingen-Crooswijk"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DkCrooswijkApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DkCrooswijkJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DkCrooswijkJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DkCrooswijkAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DkCrooswijkSeptember += 1.0;
                     }
-                if(fietsperbuurtD[9].regionMatches(true, 0, "10", 0, 1)){
+                if(fietsperbuurtD[2].regionMatches(true, 0, "10", 0, 1)){
                     DkCrooswijkOktober += 1.0;}
                 else
                     kCrooswijkOverig += 1.0;
 
                 //kCrooswijk += 1.0;
 
-                if (fietsperbuurtD[7].contains("Pernis"))
+                if (fietsperbuurtD[0].contains("Pernis"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DPernisApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DPernisJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DPernisJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DPernisAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DPernisSeptember += 1.0;
                     }
                     else
@@ -695,21 +695,21 @@ public class CSVReader extends Colors implements IDataReader {
 
                 //Pernis += 1.0;
 
-                if (fietsperbuurtD[7].contains("IJsselmonde"))
+                if (fietsperbuurtD[0].contains("IJsselmonde"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DIJsselmondeApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DIJsselmondeJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DIJsselmondeJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DIJsselmondeAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DIJsselmondeSeptember += 1.0;
                     }
                     else
@@ -717,21 +717,21 @@ public class CSVReader extends Colors implements IDataReader {
 
 
 
-                if (fietsperbuurtD[7].contains("West"))
+                if (fietsperbuurtD[0].contains("West"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DWestApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DWestJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DWestJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DWestAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DWestSeptember += 1.0;
                     }
                     else
@@ -739,21 +739,21 @@ public class CSVReader extends Colors implements IDataReader {
 
                 West += 1.0;
 
-                if (fietsperbuurtD[7].contains("Omoord"))
+                if (fietsperbuurtD[0].contains("Omoord"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DOmoordApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DOmoordJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DOmoordJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DOmoordAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DOmoordSeptember += 1.0;
                     }
                     else
@@ -762,21 +762,21 @@ public class CSVReader extends Colors implements IDataReader {
                 Omoord += 1.0;
 
 
-                if (fietsperbuurtD[7].contains("Hoogvliet"))
+                if (fietsperbuurtD[0].contains("Hoogvliet"))
 
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "4", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "4", 0, 1)){
                         DHoogvlietApril += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "6", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "6", 0, 1)){
                         DHoogvlietJuni += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "7", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "7", 0, 1)){
                         DHoogvlietJuli += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "8", 0, 1)){
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "8", 0, 1)){
                         DHoogvlietAugustus += 1.0;}
                     else
-                    if(fietsperbuurtD[9].regionMatches(true, 0, "9", 0, 1)) {
+                    if(fietsperbuurtD[2].regionMatches(true, 0, "9", 0, 1)) {
                         DHoogvlietSeptember += 1.0;
                     }
                     else
