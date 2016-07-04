@@ -61,6 +61,7 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuni(), 1));
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumAugustus(), 2));
         Diefstal.add(new BarEntry(MainActivity.RunFietsPerBuurt.getCentrumJuli(), 3));
+
         Diefstal.add(new BarEntry(120f, 4));
         Diefstal.add(new BarEntry(90f, 5));
         Diefstal.add(new BarEntry(80f, 6));
