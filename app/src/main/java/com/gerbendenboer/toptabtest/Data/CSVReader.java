@@ -412,7 +412,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                 String[] fietsperbuurtD = line.split(cvsSplitBy);
 
-                if (fietsperbuurtD[1].contains("Centrum"))
+                if (fietsperbuurtD[1].contains("CENTRUM"))
 
                     if(fietsperbuurtD[2].contains("4")){
                         DCentrumApril += 1.0;}
@@ -434,7 +434,7 @@ public class CSVReader extends Colors implements IDataReader {
                     }
 
 
-                if (fietsperbuurtD[1].contains("Charlois"))
+                if (fietsperbuurtD[1].contains("CHARLOIS"))
 
                     if(fietsperbuurtD[2].contains("1")){
                         DCharloisJanuari += 1.0;}
@@ -464,7 +464,7 @@ public class CSVReader extends Colors implements IDataReader {
                     else
                     CharloisOverig += 1.0;
 
-                if (fietsperbuurtD[1].contains("Delfshaven"))
+                if (fietsperbuurtD[1].contains("DELFSHAVEN"))
 
                 if(fietsperbuurtD[2].contains("1")){
                     DDelfshavenJanuari += 1.0;}
@@ -493,7 +493,7 @@ public class CSVReader extends Colors implements IDataReader {
                     else
                     DelfshavenOverig += 1.0;
 
-                if (fietsperbuurtD[1].contains("Feijenoord"))
+                if (fietsperbuurtD[1].contains("FEIJENOORD"))
 
                     if(fietsperbuurtD[2].contains("3")) {
                         DFeijenoordMaart += 1.0;
@@ -527,7 +527,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                             Feijenoord += 1.0;
 
-                if (fietsperbuurtD[1].contains("Noord"))
+                if (fietsperbuurtD[1].contains("NOORD"))
 
                     if(fietsperbuurtD[2].contains("1")){
                     DNoordJanuari += 1.0;}
@@ -560,7 +560,7 @@ public class CSVReader extends Colors implements IDataReader {
                     NoordOverig += 1.0;
 
                     Noord += 1.0;
-                if (fietsperbuurtD[1].contains("Hillegersberg"))
+                if (fietsperbuurtD[1].contains("HILLEGERSBERG"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DHillegersbergApril += 1.0;}
@@ -583,7 +583,7 @@ public class CSVReader extends Colors implements IDataReader {
                 //Hillegersberg += 1.0;
 
 
-                if (fietsperbuurtD[1].contains("Overschie"))
+                if (fietsperbuurtD[1].contains("OVERSCHIE"))
 
                     if(fietsperbuurtD[2].contains("2")){
                     DOverschieFebruari += 1.0;}
@@ -607,7 +607,29 @@ public class CSVReader extends Colors implements IDataReader {
                     OverschieOverig += 1.0;
 
                     Overschie += 1.0;
-                if (fietsperbuurtD[1].contains("Kralingen-Crooswijk"))
+                if (fietsperbuurtD[1].contains("CROOSWIJK"))
+
+                    if(fietsperbuurtD[2].contains("4")){
+                        DkCrooswijkApril += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("6")){
+                        DkCrooswijkJuni += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("1")){
+                        DkCrooswijkJuli += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("8")){
+                        DkCrooswijkAugustus += 1.0;}
+                    else
+                    if(fietsperbuurtD[2].contains("9")) {
+                        DkCrooswijkSeptember += 1.0;
+                    }
+                if(fietsperbuurtD[2].contains("10")){
+                    DkCrooswijkOktober += 1.0;}
+                else
+                    //kCrooswijkOverig += 1.0;
+
+                if (fietsperbuurtD[1].contains("KRALINGEN"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DkCrooswijkApril += 1.0;}
@@ -631,7 +653,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                 //kCrooswijk += 1.0;
 
-                if (fietsperbuurtD[1].contains("Pernis"))
+                if (fietsperbuurtD[1].contains("PERNIS"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DPernisApril += 1.0;}
@@ -653,7 +675,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                 //Pernis += 1.0;
 
-                if (fietsperbuurtD[1].contains("IJsselmonde"))
+                if (fietsperbuurtD[1].contains("IJSSELMONDE"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DIJsselmondeApril += 1.0;}
@@ -675,7 +697,7 @@ public class CSVReader extends Colors implements IDataReader {
 
 
 
-                if (fietsperbuurtD[1].contains("West"))
+                if (fietsperbuurtD[1].contains("WEST"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DWestApril += 1.0;}
@@ -697,7 +719,7 @@ public class CSVReader extends Colors implements IDataReader {
 
                     //West += 1.0;
 
-                if (fietsperbuurtD[1].contains("Omoord"))
+                if (fietsperbuurtD[1].contains("OMOORD"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DOmoordApril += 1.0;}
@@ -720,7 +742,7 @@ public class CSVReader extends Colors implements IDataReader {
                     //Omoord += 1.0;
 
 
-                if (fietsperbuurtD[1].contains("Hoogvliet"))
+                if (fietsperbuurtD[1].contains("HOOGVLIET"))
 
                     if(fietsperbuurtD[2].contains("4")){
                     DHoogvlietApril += 1.0;}
@@ -744,11 +766,11 @@ public class CSVReader extends Colors implements IDataReader {
         //Hoogvliet += 1.0;
                     }
 
-                    System.out.println(kCrooswijkApril);
+                    System.out.println(DkCrooswijkJuli);
 
-                    System.out.println(kCrooswijkAugustus);
+                    System.out.println(DCentrumSeptember);
 
-                    System.out.println(kCrooswijkJuni);
+                    System.out.println(DCentrumJuni);
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();

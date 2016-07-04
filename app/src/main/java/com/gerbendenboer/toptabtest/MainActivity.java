@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
         Fietstrommels.runFietstrommels();
 
-        RunFietsDiefstalPerBuurt = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
+        RunFietsDiefstalPerBuurt = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand2.csv");
         RunFietsDiefstalPerBuurt.runFietsDiefstalPerBuurt();
 
         RunFietsPerBuurt = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
