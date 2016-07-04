@@ -6,47 +6,16 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
-public class CSVReader implements IDataReader {
+public class CSVReader extends Colors implements IDataReader {
 
-    public float Centrum = 0;
-    public float Charlois = 0;
-    public float Delfshaven = 0;
-    public float Feijenoord = 0;
-    public float Noord = 0;
-    public float Hillegersberg = 0;
-    public float Overschie = 0;
-    public float kCrooswijk = 0;
-    public float Pernis = 0;
-    public float IJsselmonde = 0;
-    public float West = 0;
-    public float Omoord = 0;
-    public float Hoogvliet = 0;
-
-    public float Januari = 0;
-    public float Februari = 0;
-    public float Maart = 0;
-    public float April = 0;
-    public float Mei = 0;
-    public float Juni = 0;
-    public float Juli = 0;
-    public float Augustus = 0;
-    public float September = 0;
-    public float Oktober = 0;
-    public float November = 0;
-    public float December = 0;
-
-    public float GAZELLE = 0;
-    public float BATAVUS = 0;
-    public float PEUGEOT = 0;
-    public float SPARTA = 0;
-    public float GIANT = 0;
-    public float UNION = 0;
-    public float YAMAHA = 0;
-    public float OVERIG = 0;
+    private ArrayList<String> Buurtenlijst;
 
     Context myContext;
     String filename;
+    String[] buurten = new String[] {"Centrum", "Charlois", "Delfshaven", "Feijenoord", "Noord", "Hillegersberg", "Kralingen/Crooswijk", "Pernis", "IJsselmonde" , "West" ,"Omoord" , "Hoogvliet"};
+    double[] buurtenVariables = new double[] {Centrum, Charlois, Delfshaven, Feijenoord, Noord, Hillegersberg, kCrooswijk, Pernis, IJsselmonde ,West ,Omoord , Hoogvliet};
 
     public CSVReader(Context myContext, String filename){
         this.myContext = myContext;
@@ -69,32 +38,333 @@ public class CSVReader implements IDataReader {
                 // use comma as separator
                 String[] fietstrommels = line.split(cvsSplitBy);
 
-                if (fietstrommels[7].contains("Centrum"))
-                    Centrum += 1.0;
-                if (fietstrommels[7].contains("Charlois"))
-                    Charlois += 1.0;
-                if (fietstrommels[7].contains("Delfshaven"))
-                    Delfshaven += 1.0;
-                if (fietstrommels[7].contains("Feijenoord"))
-                    Feijenoord += 1.0;
-                if (fietstrommels[7].contains("Noord"))
-                    Noord += 1.0;
-                if (fietstrommels[7].contains("Hillegersberg"))
-                    Hillegersberg += 1.0;
-                if (fietstrommels[7].contains("Overschie"))
-                    Overschie += 1.0;
-                if (fietstrommels[7].contains("Kralingen/Crooswijk"))
-                    kCrooswijk += 1.0;
-                if (fietstrommels[7].contains("Pernis"))
-                    Pernis += 1.0;
-                if (fietstrommels[7].contains("IJsselmonde"))
-                    IJsselmonde += 1.0;
-                if (fietstrommels[7].contains("West"))
-                    West += 1.0;
-                if (fietstrommels[7].contains("Omoord"))
-                    Omoord += 1.0;
-                if (fietstrommels[7].contains("Hoogvliet"))
-                    Hoogvliet += 1.0;
+                int temp = -1;
+
+                for(String i : buurten){
+                    if (fietstrommels[7].contains(i)){
+                        temp += 1;
+                        for(double j : buurtenVariables){
+                            buurtenVariables[temp] += 1;
+
+                            }
+                        }
+                    }
+                }
+
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println("run > per buurt = " + buurtenVariables[1]);
+    }
+
+    @Override
+    public void runFietsPerBuurt() {
+
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+
+
+        try {
+
+            InputStreamReader is = new InputStreamReader(myContext.getAssets().open(filename));
+            br = new BufferedReader(is);
+            while ((line = br.readLine()) != null) {
+
+                String[] fietsperbuurt = line.split(cvsSplitBy);
+
+                if (fietsperbuurt[7].contains("Centrum"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        CentrumApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        CentrumJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        CentrumJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        CentrumAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        CentrumSeptember += 1.0;
+                    }
+                    else
+                        CentrumOverig += 1.0;
+
+                if (fietsperbuurt[7].contains("Charlois"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        CharloisApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        CharloisJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        CharloisJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        CharloisAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        CharloisSeptember += 1.0;
+                    }
+                    else
+                        CentrumOverig += 1.0;
+
+                if (fietsperbuurt[7].contains("Delfshaven"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        DelfshavenApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        DelfshavenJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        DelfshavenJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        DelfshavenAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        DelfshavenSeptember += 1.0;
+                    }
+                    else
+                        DelfshavenOverig += 1.0;
+
+                if (fietsperbuurt[7].contains("Feijenoord"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        FeijenoordApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        FeijenoordJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        FeijenoordJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        FeijenoordAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        FeijenoordSeptember += 1.0;
+                    }
+                    else
+                        FeijenoordOverig += 1.0;
+
+                Feijenoord += 1.0;
+
+                if (fietsperbuurt[7].contains("Noord"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        NoordApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        NoordJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        NoordJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        NoordAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        NoordSeptember += 1.0;
+                    }
+                    else
+                        NoordOverig += 1.0;
+
+                Noord += 1.0;
+                if (fietsperbuurt[7].contains("Hillegersberg"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        HillegersbergApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        HillegersbergJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        HillegersbergJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        HillegersbergAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        HillegersbergSeptember += 1.0;
+                    }
+                    else
+                        HillegersbergOverig += 1.0;
+
+                Hillegersberg += 1.0;
+
+
+                if (fietsperbuurt[7].contains("Overschie"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        OverschieApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        OverschieJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        OverschieJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        OverschieAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        OverschieSeptember += 1.0;
+                    }
+                    else
+                        OverschieOverig += 1.0;
+
+                Overschie += 1.0;
+                if (fietsperbuurt[7].contains("Kralingen/Crooswijk"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        kCrooswijkApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        kCrooswijkJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        kCrooswijkJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        kCrooswijkAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        kCrooswijkSeptember += 1.0;
+                    }
+                    else
+                        kCrooswijkOverig += 1.0;
+
+                kCrooswijk += 1.0;
+
+                if (fietsperbuurt[7].contains("Pernis"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        PernisApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        PernisJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        PernisJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        PernisAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        PernisSeptember += 1.0;
+                    }
+                    else
+                        PernisOverig += 1.0;
+
+                Pernis += 1.0;
+
+                if (fietsperbuurt[7].contains("IJsselmonde"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        IJsselmondeApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        IJsselmondeJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        IJsselmondeJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        IJsselmondeAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        IJsselmondeSeptember += 1.0;
+                    }
+                    else
+                        IJsselmondeOverig += 1.0;
+
+                IJsselmonde += 1.0;
+
+                if (fietsperbuurt[7].contains("West"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        WestApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        WestJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        WestJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        WestAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        WestSeptember += 1.0;
+                    }
+                    else
+                        WestOverig += 1.0;
+
+                West += 1.0;
+
+                if (fietsperbuurt[7].contains("Omoord"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        OmoordApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        OmoordJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        OmoordJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        OmoordAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        OmoordSeptember += 1.0;
+                    }
+                    else
+                        OmoordOverig += 1.0;
+
+                Omoord += 1.0;
+
+
+                if (fietsperbuurt[7].contains("Hoogvliet"))
+
+                    if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
+                        HoogvlietApril += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
+                        HoogvlietJuni += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "7", 0, 1)){
+                        HoogvlietJuli += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "8", 0, 1)){
+                        HoogvlietAugustus += 1.0;}
+                    else
+                    if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
+                        HoogvlietSeptember += 1.0;
+                    }
+                    else
+                        HoogvlietOverig += 1.0;
+
+
+                Hoogvliet += 1.0;
             }
 
         } catch (FileNotFoundException e) {
@@ -110,7 +380,6 @@ public class CSVReader implements IDataReader {
                 }
             }
         }
-        System.out.println("run > per buurt = " + Centrum);
     }
 
     @Override
@@ -180,8 +449,6 @@ public class CSVReader implements IDataReader {
                 }
             }
         }
-        System.out.println("run > per_maand = " + Januari );
-
     }
 
     @Override
@@ -201,9 +468,9 @@ public class CSVReader implements IDataReader {
                 String[] brand = line.split(cvsSplitBy);
 
                 if (brand[1].contains("GAZELLE"))
-                    GAZELLE += 0;
+                    GAZELLE += 1.0;
                 if (brand[1].contains("PEUGEOT"))
-                    PEUGEOT += 0;
+                    PEUGEOT += 1.0;
                 if (brand[1].contains("BATAVUS"))
                     BATAVUS += 1.0;
                 if (brand[1].contains("SPARTA"))
@@ -232,107 +499,56 @@ public class CSVReader implements IDataReader {
                 }
             }
         }
-        System.out.println("run > per_merk = " + YAMAHA );
+    }
+
+    @Override
+    public void runColor() {
+
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+
+        try {
+
+            InputStreamReader is = new InputStreamReader(myContext.getAssets().open(filename));
+            br = new BufferedReader(is);
+            while ((line = br.readLine()) != null) {
+
+                // use comma as separator
+                String[] Color = line.split(cvsSplitBy);
+
+                if (Color[3].contains("ROOD"))
+                    ROOD += 1.0;
+                if (Color[3].contains("GROEN"))
+                    GROEN += 1.0;
+                if (Color[3].contains("BLAUW"))
+                    BLAUW += 1.0;
+                if (Color[3].contains("GRIJS"))
+                    GRIJS += 1.0;
+                if (Color[3].contains("CHROOM"))
+                    CHROOM += 1.0;
+                if (Color[3].contains("ZWART"))
+                    ZWART += 1.0;
+                if (Color[3].contains("ZILVER"))
+                    ZILVER += 1.0;
+                if (Color[3].contains("ONBEKEND"))
+                    ONBEKEND += 1.0;
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 
-    public float getCentrum(){
-        return Centrum;
-    }
-
-    public float getFeijenoord() {
-        return Feijenoord;
-    }
-
-    public float getHillegersberg() {
-        return Hillegersberg;
-    }
-
-    public float getOverschie() {
-        return Overschie;
-    }
-
-    public float getkCrooswijk() {
-        return kCrooswijk;
-    }
-
-    public float getPernis() {
-        return Pernis;
-    }
-
-    public float getIJsselmonde() {
-        return IJsselmonde;
-    }
-
-    public float getWest() {
-        return West;
-    }
-
-    public float getOmoord() {
-        return Omoord;
-    }
-
-    public float getHoogvliet() {
-        return Hoogvliet;
-    }
-
-    public float getCharlois() {
-        return Charlois;
-    }
-
-    public float getDelfshaven() {
-        return Delfshaven;
-    }
-
-    public float getNoord() {
-        return Noord;
-    }
-
-    public float getDecember() {
-        return December;
-    }
-
-    public float getNovember() {
-        return November;
-    }
-
-    public float getOktober() {
-        return Oktober;
-    }
-
-    public float getSeptember() {
-        return September;
-    }
-
-    public float getAugustus() {
-        return Augustus;
-    }
-
-    public float getJuli() {
-        return Juli;
-    }
-
-    public float getMei() {
-        return Mei;
-    }
-
-    public float getJuni() {
-        return Juni;
-    }
-
-    public float getApril() {
-        return April;
-    }
-
-    public float getMaart() {
-        return Maart;
-    }
-
-    public float getFebruari() {
-        return Februari;
-    }
-
-    public float getJanuari() {
-        return Januari;
-    }
 }
