@@ -38,20 +38,33 @@ public class CSVReader extends Colors implements IDataReader {
                 // use comma as separator
                 String[] fietstrommels = line.split(cvsSplitBy);
 
-                int temp = -1;
-
-                for(String i : buurten){
-                    if (fietstrommels[7].contains(i)){
-                        temp += 1;
-                        for(double j : buurtenVariables){
-                            buurtenVariables[temp] += 1;
-
-                            }
-                        }
-                    }
-                }
-
-
+                if (fietstrommels[7].contains("Centrum"))
+                    Centrum += 1.0;
+                if (fietstrommels[7].contains("Charlois"))
+                    Charlois += 1.0;
+                if (fietstrommels[7].contains("Delfshaven"))
+                    Delfshaven += 1.0;
+                if (fietstrommels[7].contains("Feijenoord"))
+                    Feijenoord += 1.0;
+                if (fietstrommels[7].contains("Noord"))
+                    Noord += 1.0;
+                if (fietstrommels[7].contains("Hillegersberg"))
+                    Hillegersberg += 1.0;
+                if (fietstrommels[7].contains("Overschie"))
+                    Overschie += 1.0;
+                if (fietstrommels[7].contains("Kralingen/Crooswijk"))
+                    kCrooswijk += 1.0;
+                if (fietstrommels[7].contains("Pernis"))
+                    Pernis += 1.0;
+                if (fietstrommels[7].contains("IJsselmonde"))
+                    IJsselmonde += 1.0;
+                if (fietstrommels[7].contains("West"))
+                    West += 1.0;
+                if (fietstrommels[7].contains("Omoord"))
+                    Omoord += 1.0;
+                if (fietstrommels[7].contains("Hoogvliet"))
+                    Hoogvliet += 1.0;
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -66,7 +79,8 @@ public class CSVReader extends Colors implements IDataReader {
                 }
             }
         }
-        System.out.println("run > per buurt = " + buurtenVariables[4]);
+        System.out.println("Done");;
+        System.out.println("Hoogvliet"+ Hoogvliet);
     }
 
     @Override
@@ -90,9 +104,6 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         CentrumApril += 1.0;}
                     else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "5", 0, 1)){
-                        CentrumMei += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         CentrumJuni += 1.0;}
                     else
@@ -105,18 +116,13 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
                         CentrumSeptember += 1.0;
                     }
-
+                    else
+                        CentrumOverig += 1.0;
 
                 if (fietsperbuurt[7].contains("Charlois"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "1", 0, 1)){
-                        CharloisJanuari += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         CharloisApril += 1.0;}
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "5", 0, 1)){
-                        CharloisMei += 1.0;}
                     else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         CharloisJuni += 1.0;}
@@ -131,22 +137,12 @@ public class CSVReader extends Colors implements IDataReader {
                         CharloisSeptember += 1.0;
                     }
                     else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "12", 0, 1)) {
-                        CharloisDecember += 1.0;
-                    }
-                    else
-                        CharloisOverig += 1.0;
+                        CentrumOverig += 1.0;
 
                 if (fietsperbuurt[7].contains("Delfshaven"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "1", 0, 1)){
-                        DelfshavenJanuari += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         DelfshavenApril += 1.0;}
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "5", 0, 1)){
-                        DelfshavenMei += 1.0;}
                     else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         DelfshavenJuni += 1.0;}
@@ -160,18 +156,11 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
                         DelfshavenSeptember += 1.0;
                     }
-                    if(fietsperbuurt[9].regionMatches(true, 0, "11", 0, 1)) {
-                        DelfshavenNovember += 1.0;
-                    }
                     else
                         DelfshavenOverig += 1.0;
 
                 if (fietsperbuurt[7].contains("Feijenoord"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "3", 0, 1)) {
-                        FeijenoordMaart += 1.0;
-                    }
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         FeijenoordApril += 1.0;}
                     else
@@ -188,34 +177,14 @@ public class CSVReader extends Colors implements IDataReader {
                         FeijenoordSeptember += 1.0;
                     }
                     else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "10", 0, 1)) {
-                        FeijenoordOktober += 1.0;
-                    }
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "11", 0, 1)) {
-                        FeijenoordNovember += 1.0;
-                    }
-                    else
                         FeijenoordOverig += 1.0;
 
                 Feijenoord += 1.0;
 
                 if (fietsperbuurt[7].contains("Noord"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "1", 0, 1)){
-                        NoordJanuari += 1.0;}
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "2", 0, 1)){
-                        NoordFebruari += 1.0;}
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "3", 0, 1)){
-                        NoordMaart += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         NoordApril += 1.0;}
-                    else
-                    if(fietsperbuurt[9].regionMatches(true, 0, "5", 0, 1)){
-                        NoordMei += 1.0;}
                     else
                     if(fietsperbuurt[9].regionMatches(true, 0, "6", 0, 1)){
                         NoordJuni += 1.0;}
@@ -258,9 +227,6 @@ public class CSVReader extends Colors implements IDataReader {
 
                 if (fietsperbuurt[7].contains("Overschie"))
 
-                    if(fietsperbuurt[9].regionMatches(true, 0, "2", 0, 1)){
-                        OverschieFebruari += 1.0;}
-                    else
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         OverschieApril += 1.0;}
                     else
@@ -280,7 +246,7 @@ public class CSVReader extends Colors implements IDataReader {
                         OverschieOverig += 1.0;
 
                 Overschie += 1.0;
-                if (fietsperbuurt[7].contains("Kralingen-Crooswijk"))
+                if (fietsperbuurt[7].contains("Kralingen/Crooswijk"))
 
                     if(fietsperbuurt[9].regionMatches(true, 0, "4", 0, 1)){
                         kCrooswijkApril += 1.0;}
@@ -297,8 +263,6 @@ public class CSVReader extends Colors implements IDataReader {
                     if(fietsperbuurt[9].regionMatches(true, 0, "9", 0, 1)) {
                         kCrooswijkSeptember += 1.0;
                     }
-                    if(fietsperbuurt[9].regionMatches(true, 0, "10", 0, 1)){
-                        kCrooswijkOktober += 1.0;}
                     else
                         kCrooswijkOverig += 1.0;
 
@@ -416,12 +380,6 @@ public class CSVReader extends Colors implements IDataReader {
 
                 Hoogvliet += 1.0;
             }
-
-            System.out.println(kCrooswijkApril);
-
-            System.out.println(kCrooswijkAugustus);
-
-            System.out.println(kCrooswijkJuni);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -823,41 +781,41 @@ public class CSVReader extends Colors implements IDataReader {
                 // use comma as separator
                 String[] diefstal4 = line.split(cvsSplitBy);
 
-                if (diefstal4[2].contains("1"))
-                    if(diefstal4[2].contains("10")){
+                if (diefstal4[4].contains("1"))
+                    if(diefstal4[4].contains("10")){
                         Januari += 0;}
                     else
-                    if(diefstal4[2].contains("11")){
+                    if(diefstal4[4].contains("11")){
                         Januari += 0;}
                     else
-                    if(diefstal4[2].contains("12")){
+                    if(diefstal4[4].contains("12")){
                         Januari += 0;}
                     else{
                         Januari += 1.0;}
-                if (diefstal4[2].contains("2"))
-                    if(diefstal4[2].contains("12")){
+                if (diefstal4[4].contains("2"))
+                    if(diefstal4[4].contains("12")){
                         Februari += 0;}
                     else
                         Februari += 1.0;
-                if (diefstal4[2].contains("3"))
+                if (diefstal4[4].contains("3"))
                     Maart += 1.0;
-                if (diefstal4[2].contains("4"))
+                if (diefstal4[4].contains("4"))
                     April += 1.0;
-                if (diefstal4[2].contains("5"))
+                if (diefstal4[4].contains("5"))
                     Mei += 1.0;
-                if (diefstal4[2].contains("6"))
+                if (diefstal4[4].contains("6"))
                     Juni += 1.0;
-                if (diefstal4[2].contains("7"))
+                if (diefstal4[4].contains("7"))
                     Juli += 1.0;
-                if (diefstal4[2].contains("8"))
+                if (diefstal4[4].contains("8"))
                     Augustus += 1.0;
-                if (diefstal4[2].contains("9"))
+                if (diefstal4[4].contains("9"))
                     September += 1.0;
-                if (diefstal4[2].contains("10"))
+                if (diefstal4[4].contains("10"))
                     Oktober += 1.0;
-                if (diefstal4[2].contains("11"))
+                if (diefstal4[4].contains("11"))
                     November += 1.0;
-                if (diefstal4[2].contains("12"))
+                if (diefstal4[4].contains("12"))
                     December += 1.0;
             }
 
@@ -892,21 +850,21 @@ public class CSVReader extends Colors implements IDataReader {
                 // use comma as separator
                 String[] brand = line.split(cvsSplitBy);
 
-                if (brand[4].contains("GAZELLE"))
+                if (brand[1].contains("GAZELLE"))
                     GAZELLE += 1.0;
-                if (brand[4].contains("PEUGEOT"))
+                if (brand[1].contains("PEUGEOT"))
                     PEUGEOT += 1.0;
-                if (brand[4].contains("BATAVUS"))
+                if (brand[1].contains("BATAVUS"))
                     BATAVUS += 1.0;
-                if (brand[4].contains("SPARTA"))
+                if (brand[1].contains("SPARTA"))
                     SPARTA += 1.0;
-                if (brand[4].contains("GIANT"))
+                if (brand[1].contains("GIANT"))
                     GIANT += 1.0;
-                if (brand[4].contains("UNION"))
+                if (brand[1].contains("UNION"))
                     UNION += 1.0;
-                if (brand[4].contains("YAMAHA"))
+                if (brand[1].contains("YAMAHA"))
                     YAMAHA += 1.0;
-                if (brand[4].contains("OVERIG"))
+                if (brand[1].contains("OVERIG"))
                     OVERIG += 1.0;
 
             }
@@ -942,21 +900,21 @@ public class CSVReader extends Colors implements IDataReader {
                 // use comma as separator
                 String[] Color = line.split(cvsSplitBy);
 
-                if (Color[5].contains("ROOD"))
+                if (Color[3].contains("ROOD"))
                     ROOD += 1.0;
-                if (Color[5].contains("GROEN"))
+                if (Color[3].contains("GROEN"))
                     GROEN += 1.0;
-                if (Color[5].contains("BLAUW"))
+                if (Color[3].contains("BLAUW"))
                     BLAUW += 1.0;
-                if (Color[5].contains("GRIJS"))
+                if (Color[3].contains("GRIJS"))
                     GRIJS += 1.0;
-                if (Color[5].contains("CHROOM"))
+                if (Color[3].contains("CHROOM"))
                     CHROOM += 1.0;
-                if (Color[5].contains("ZWART"))
+                if (Color[3].contains("ZWART"))
                     ZWART += 1.0;
-                if (Color[5].contains("ZILVER"))
+                if (Color[3].contains("ZILVER"))
                     ZILVER += 1.0;
-                if (Color[5].contains("ONBEKEND"))
+                if (Color[3].contains("ONBEKEND"))
                     ONBEKEND += 1.0;
 
             }
