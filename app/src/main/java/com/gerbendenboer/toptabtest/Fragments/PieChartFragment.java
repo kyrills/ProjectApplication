@@ -41,16 +41,17 @@ public class PieChartFragment extends Fragment {
         pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChartBrand.setData(pieDataBrand); //set pieData into chart
         pieChartBrand.setDescription("Most stolen bike brands");
-        pieChartBrand.animateY(1500);
+        pieChartBrand.animateY(500);
         pieChartBrand.setTouchEnabled(false);
         Legend legendBrand = pieChartBrand.getLegend();
-        legendBrand.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
+        legendBrand.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+        pieChartBrand.getLegend().setWordWrapEnabled(true);
 
 
         pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
         pieChartColour.setData(pieDataColour);
         pieChartColour.setDescription("Most stolen bikes depending on colour");
-        pieChartColour.animateY(1500);
+        pieChartColour.animateY(500);
         pieChartColour.setTouchEnabled(false);
         Legend legendColour = pieChartColour.getLegend();
         legendColour.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
@@ -94,7 +95,7 @@ public class PieChartFragment extends Fragment {
         labelsColour.add("Black");
         labelsColour.add("Unknown");
 
-        PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"TFHTFTFFTFTFT");
+        PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"");
         ArrayList<String> labelsBrand = new ArrayList<String>();
         labelsBrand.add("Batavus");
         labelsBrand.add("Gazelle");

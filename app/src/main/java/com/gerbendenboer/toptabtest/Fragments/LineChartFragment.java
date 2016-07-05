@@ -91,6 +91,8 @@ public class LineChartFragment extends Fragment{
         lineChart.setDescription("");
         Legend legend = lineChart.getLegend();
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+        lineChart.getLegend().setWordWrapEnabled(true);
+
     }
 
     @Override
