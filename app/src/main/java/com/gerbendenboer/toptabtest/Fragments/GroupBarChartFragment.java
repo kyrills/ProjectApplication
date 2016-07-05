@@ -23,9 +23,7 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
     private BarData data;
     private String area;
 
-    public GroupBarChartFragment(String area){
-        this.area = area;
-    }
+    public GroupBarChartFragment(String area){this.area = area;}
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
