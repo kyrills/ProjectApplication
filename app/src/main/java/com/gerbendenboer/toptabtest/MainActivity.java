@@ -10,6 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
 import com.gerbendenboer.toptabtest.Data.CSVReader;
+import com.gerbendenboer.toptabtest.Data.CSVReaderDiefstalPerBuurt;
+import com.gerbendenboer.toptabtest.Data.CSVReaderFietsPerBuurt;
+import com.gerbendenboer.toptabtest.Data.CSVReaderTrommels;
 import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
 import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
@@ -23,9 +26,9 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
-    public static CSVReader Fietstrommels;
-    public static CSVReader RunFietsPerBuurt;
-    public static CSVReader RunFietsDiefstalPerBuurt;
+    public static CSVReaderTrommels Fietstrommels;
+    public static CSVReaderFietsPerBuurt RunFietsPerBuurt;
+    public static CSVReaderDiefstalPerBuurt RunFietsDiefstalPerBuurt;
     public static CSVReader DiefstalMaand;
     public static CSVReader Brands;
     public static CSVReader Color;
@@ -36,13 +39,13 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+        Fietstrommels = new CSVReaderTrommels(this.getApplicationContext(), "fietstrommels.csv");
         Fietstrommels.runFietstrommels();
 
-        RunFietsDiefstalPerBuurt = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand2.csv");
+        RunFietsDiefstalPerBuurt = new CSVReaderDiefstalPerBuurt(this.getApplicationContext(), "fietsroof_per_maand2.csv");
         RunFietsDiefstalPerBuurt.runFietsDiefstalPerBuurt();
 
-        RunFietsPerBuurt = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
+        RunFietsPerBuurt = new CSVReaderFietsPerBuurt(this.getApplicationContext(), "fietstrommels.csv");
         RunFietsPerBuurt.runFietsPerBuurt();
 
         DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");

@@ -2,9 +2,9 @@ package com.gerbendenboer.toptabtest.Data;
 
 public interface IDataReader {
 
-    void runFietstrommels();
-    void runFietsPerBuurt();
-    void runFietsDiefstalPerBuurt();
+    //void runFietstrommels();
+
+
     void runDiefstal();
     void runBrand();
     void runColor();
