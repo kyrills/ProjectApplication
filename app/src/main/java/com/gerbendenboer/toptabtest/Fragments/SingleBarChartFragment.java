@@ -36,74 +36,74 @@ public class SingleBarChartFragment extends Fragment {
         super.onCreate(savedInstanceState);
         topFiveIndex = 0;
 
-        MainActivity.Fietstrommels.runFietstrommels();
+        MainActivity.bikeContainers.runBikeContainers();
 
         ArrayList<String> labels = new ArrayList<>();
         ArrayList<BarEntry> group1 = new ArrayList<>();
 
         for (float x = 999; x >= 0; x--){
             if(topFiveIndex <= 4) {
-                if (MainActivity.Fietstrommels.getCentrum() == x) {
+                if (MainActivity.bikeContainers.getCentrum() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Centrum");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getCharlois() == x) {
+                if (MainActivity.bikeContainers.getCharlois() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Charlois");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getDelfshaven() == x) {
+                if (MainActivity.bikeContainers.getDelfshaven() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Delfshaven");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getFeijenoord() == x) {
+                if (MainActivity.bikeContainers.getFeijenoord() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Feijenoord");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getHillegersberg() == x) {
+                if (MainActivity.bikeContainers.getHillegersberg() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Hillegersberg");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getHoogvliet() == x) {
+                if (MainActivity.bikeContainers.getHoogvliet() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Hoogvliet");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getIJsselmonde() == x) {
+                if (MainActivity.bikeContainers.getIJsselmonde() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("IJsselmonde");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getkCrooswijk() == x) {
+                if (MainActivity.bikeContainers.getkCrooswijk() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Crooswijk");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getNoord() == x) {
+                if (MainActivity.bikeContainers.getNoord() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Noord");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getOmoord() == x) {
+                if (MainActivity.bikeContainers.getOmoord() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Omoord");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getOverschie() == x) {
+                if (MainActivity.bikeContainers.getOverschie() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Overschie");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getPernis() == x) {
+                if (MainActivity.bikeContainers.getPernis() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("Pernis");
                     topFiveIndex += 1;
                 }
-                if (MainActivity.Fietstrommels.getWest() == x) {
+                if (MainActivity.bikeContainers.getWest() == x) {
                     group1.add(new BarEntry(x, topFiveIndex));
                     labels.add("West");
                     topFiveIndex += 1;

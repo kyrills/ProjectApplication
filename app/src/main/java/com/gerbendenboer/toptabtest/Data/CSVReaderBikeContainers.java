@@ -1,8 +1,5 @@
 package com.gerbendenboer.toptabtest.Data;
 
-/**
- * Created by Samuel on 05-07-16.
- */
 
 import android.content.Context;
 
@@ -13,18 +10,17 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
-public class CSVReaderTrommels extends Colors implements IDatareaderTrommel {
+public class CSVReaderBikeContainers extends Neighbourhoods{
 
     Context myContext;
     String filename;
 
-    public CSVReaderTrommels(Context myContext, String filename) {
+    public CSVReaderBikeContainers(Context myContext, String filename) {
         this.myContext = myContext;
         this.filename = filename;
     }
 
-    @Override
-    public void runFietstrommels() {
+    public void runBikeContainers() {
 
         BufferedReader br = null;
         String line = "";

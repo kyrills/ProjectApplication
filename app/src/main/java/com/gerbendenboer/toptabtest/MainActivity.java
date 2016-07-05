@@ -9,10 +9,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
-import com.gerbendenboer.toptabtest.Data.CSVReader;
-import com.gerbendenboer.toptabtest.Data.CSVReaderDiefstalPerBuurt;
-import com.gerbendenboer.toptabtest.Data.CSVReaderFietsPerBuurt;
-import com.gerbendenboer.toptabtest.Data.CSVReaderTrommels;
+import com.gerbendenboer.toptabtest.Data.CSVReaderTheftBrandColor;
+import com.gerbendenboer.toptabtest.Data.CSVReaderTheftPerNeighborhood;
+import com.gerbendenboer.toptabtest.Data.CSVReaderContainerPerNeighborhood;
+import com.gerbendenboer.toptabtest.Data.CSVReaderBikeContainers;
 import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
 import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private ListView listView;
-    public static CSVReaderTrommels Fietstrommels;
-    public static CSVReaderFietsPerBuurt RunFietsPerBuurt;
-    public static CSVReaderDiefstalPerBuurt RunFietsDiefstalPerBuurt;
-    public static CSVReader DiefstalMaand;
-    public static CSVReader Brands;
-    public static CSVReader Color;
+    public static CSVReaderBikeContainers bikeContainers;
+    public static CSVReaderContainerPerNeighborhood containerPerNeighborhood;
+    public static CSVReaderTheftPerNeighborhood theftPerNeighborhood;
+    public static CSVReaderTheftBrandColor theft;
+    public static CSVReaderTheftBrandColor brand;
+    public static CSVReaderTheftBrandColor color;
 
 
     @Override
@@ -39,23 +39,23 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fietstrommels = new CSVReaderTrommels(this.getApplicationContext(), "fietstrommels.csv");
-        Fietstrommels.runFietstrommels();
+        bikeContainers = new CSVReaderBikeContainers(this.getApplicationContext(), "fietstrommels.csv");
+        bikeContainers.runBikeContainers();
 
-        RunFietsDiefstalPerBuurt = new CSVReaderDiefstalPerBuurt(this.getApplicationContext(), "fietsroof_per_maand2.csv");
-        RunFietsDiefstalPerBuurt.runFietsDiefstalPerBuurt();
+        theftPerNeighborhood = new CSVReaderTheftPerNeighborhood(this.getApplicationContext(), "fietsroof_per_maand2.csv");
+        theftPerNeighborhood.runBikeTheftPerNeighborhood();
 
-        RunFietsPerBuurt = new CSVReaderFietsPerBuurt(this.getApplicationContext(), "fietstrommels.csv");
-        RunFietsPerBuurt.runFietsPerBuurt();
+        containerPerNeighborhood = new CSVReaderContainerPerNeighborhood(this.getApplicationContext(), "fietstrommels.csv");
+        containerPerNeighborhood.runBikePerNeighborhood();
 
-        DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
-        DiefstalMaand.runDiefstal();
+        theft = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsroof_per_maand.csv");
+        theft.runTheft();
 
-        Color = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
-        Color.runColor();
+        color = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsmerk.csv");
+        color.runColor();
 
-        Brands = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
-        Brands.runBrand();
+        brand = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsmerk.csv");
+        brand.runBrand();
 
         toolbar = (Toolbar) findViewById(R.id.toolBar);
         listView = (ListView) findViewById(R.id.list_view);

@@ -7,21 +7,18 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Samuel on 05-07-16.
- */
-public class CSVReaderFietsPerBuurt extends Colors implements IDataReaderFietsPerBuurt {
+public class CSVReaderContainerPerNeighborhood extends MonthPerNeighbourhoodContainers {
 
     Context myContext;
     String filename;
 
-    public CSVReaderFietsPerBuurt(Context myContext, String filename) {
+    public CSVReaderContainerPerNeighborhood(Context myContext, String filename) {
         this.myContext = myContext;
         this.filename = filename;
     }
 
 
-    public void runFietsPerBuurt() {
+    public void runBikePerNeighborhood() {
 
         BufferedReader br = null;
         String line = "";

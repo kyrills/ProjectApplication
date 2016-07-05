@@ -1,29 +1,22 @@
 package com.gerbendenboer.toptabtest.Data;
 
 import android.content.Context;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-public class CSVReader extends Colors implements IDataReader {
-
-    private ArrayList<String> Buurtenlijst;
-
+public class CSVReaderTheftBrandColor extends TheftBrandColor {
     Context myContext;
     String filename;
-    String[] buurten = new String[] {"Centrum", "Charlois", "Delfshaven", "Feijenoord", "Noord", "Hillegersberg", "Kralingen/Crooswijk", "Pernis", "IJsselmonde" , "West" ,"Omoord" , "Hoogvliet"};
-    double[] buurtenVariables = new double[] {Centrum, Charlois, Delfshaven, Feijenoord, Noord, Hillegersberg, kCrooswijk, Pernis, IJsselmonde ,West ,Omoord , Hoogvliet};
 
-    public CSVReader(Context myContext, String filename){
+    public CSVReaderTheftBrandColor(Context myContext, String filename){
         this.myContext = myContext;
         this.filename = filename;
     }
 
-    @Override
-    public void runDiefstal() {
+
+    public void runTheft() {
 
         BufferedReader br = null;
         String line = "";
@@ -91,7 +84,7 @@ public class CSVReader extends Colors implements IDataReader {
         }
     }
 
-    @Override
+
     public void runBrand() {
 
         BufferedReader br = null;
@@ -141,7 +134,7 @@ public class CSVReader extends Colors implements IDataReader {
         }
     }
 
-    @Override
+
     public void runColor() {
 
         BufferedReader br = null;

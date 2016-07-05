@@ -1,6 +1,6 @@
 package com.gerbendenboer.toptabtest.Data;
 
-public class Neighbourhoods extends Months {
+public class Neighbourhoods {
 
     public float Centrum = 0;
     public float Charlois = 0;

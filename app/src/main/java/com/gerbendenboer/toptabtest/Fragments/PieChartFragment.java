@@ -7,15 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ToggleButton;
 
-import com.gerbendenboer.toptabtest.Factory.ButtonFactory;
-import com.gerbendenboer.toptabtest.Factory.IButton;
 import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -27,7 +23,7 @@ public class PieChartFragment extends Fragment {
     private PieChart pieChartColour;
     private PieData pieDataColour;
     private PieData pieDataBrand;
-    public float topFiveIndex;
+    private float topFiveIndex;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -62,27 +58,27 @@ public class PieChartFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         topFiveIndex = 0;
-        MainActivity.Brands.runBrand();
+        MainActivity.brand.runBrand();
 
         ArrayList<Entry> entriesColour = new ArrayList<>();
-        entriesColour.add(new Entry(MainActivity.Color.getBLAUW(), 8));
-        entriesColour.add(new Entry(MainActivity.Color.getCHROOM(), 9));
-        entriesColour.add(new Entry(MainActivity.Color.getGRIJS(), 10));
-        entriesColour.add(new Entry(MainActivity.Color.getGROEN(), 11));
-        entriesColour.add(new Entry(MainActivity.Color.getROOD(), 12));
-        entriesColour.add(new Entry(MainActivity.Color.getZILVER(), 13));
-        entriesColour.add(new Entry(MainActivity.Color.getZWART(), 14));
-        entriesColour.add(new Entry(MainActivity.Color.getONBEKEND(), 15));
+        entriesColour.add(new Entry(MainActivity.color.getBLAUW(), 8));
+        entriesColour.add(new Entry(MainActivity.color.getCHROOM(), 9));
+        entriesColour.add(new Entry(MainActivity.color.getGRIJS(), 10));
+        entriesColour.add(new Entry(MainActivity.color.getGROEN(), 11));
+        entriesColour.add(new Entry(MainActivity.color.getROOD(), 12));
+        entriesColour.add(new Entry(MainActivity.color.getZILVER(), 13));
+        entriesColour.add(new Entry(MainActivity.color.getZWART(), 14));
+        entriesColour.add(new Entry(MainActivity.color.getONBEKEND(), 15));
 //
         ArrayList<Entry> entriesBrand = new ArrayList<>();
-        entriesBrand.add(new Entry(MainActivity.Brands.getBATAVUS(), 0));
-        entriesBrand.add(new Entry(MainActivity.Brands.getGAZELLE(), 1));
-        entriesBrand.add(new Entry(MainActivity.Brands.getGIANT(), 2));
-        entriesBrand.add(new Entry(MainActivity.Brands.getPEUGEOT(), 3));
-        entriesBrand.add(new Entry(MainActivity.Brands.getSPARTA(), 4));
-        entriesBrand.add(new Entry(MainActivity.Brands.getUNION(), 5));
-        entriesBrand.add(new Entry(MainActivity.Brands.getYAMAHA(), 6));
-        entriesBrand.add(new Entry(MainActivity.Brands.getOVERIG(), 7));
+        entriesBrand.add(new Entry(MainActivity.brand.getBATAVUS(), 0));
+        entriesBrand.add(new Entry(MainActivity.brand.getGAZELLE(), 1));
+        entriesBrand.add(new Entry(MainActivity.brand.getGIANT(), 2));
+        entriesBrand.add(new Entry(MainActivity.brand.getPEUGEOT(), 3));
+        entriesBrand.add(new Entry(MainActivity.brand.getSPARTA(), 4));
+        entriesBrand.add(new Entry(MainActivity.brand.getUNION(), 5));
+        entriesBrand.add(new Entry(MainActivity.brand.getYAMAHA(), 6));
+        entriesBrand.add(new Entry(MainActivity.brand.getOVERIG(), 7));
 
         PieDataSet dataSetColour = new PieDataSet(entriesColour, "");
         ArrayList<String> labelsColour = new ArrayList<String>();

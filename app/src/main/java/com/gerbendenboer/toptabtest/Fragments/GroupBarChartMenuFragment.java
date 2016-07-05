@@ -17,9 +17,9 @@ import com.gerbendenboer.toptabtest.Factory.IButton;
 import com.gerbendenboer.toptabtest.R;
 
 public class GroupBarChartMenuFragment extends Fragment {
-    Button centrumButton, charloisButton, delfshavenButton, feijenoordButton, noordButton, hillegersbergButton, overschieButton;
-    Button kcrooswijkButton, pernisButton, ijsselmondeButton, westButton, omoordButton, hoogvlietButton;
-    Context cont;
+    private Button centrumButton, charloisButton, delfshavenButton, feijenoordButton, noordButton, hillegersbergButton, overschieButton;
+    private Button kcrooswijkButton, pernisButton, ijsselmondeButton, westButton, omoordButton, hoogvlietButton;
+    private Context cont;
 
     public GroupBarChartMenuFragment() {}
 
@@ -80,7 +80,7 @@ public class GroupBarChartMenuFragment extends Fragment {
         hoogvliet.action(hoogvlietButton, btnOnClickListener);
     }
 
-    Button.OnClickListener btnOnClickListener = new Button.OnClickListener(){
+        Button.OnClickListener btnOnClickListener = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
             Fragment newFragment;

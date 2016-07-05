@@ -1,7 +1,6 @@
 package com.gerbendenboer.toptabtest.Data;
 
-public class MonthPNeightbourhoodD {
-
+public class MonthPerNeightbourhoodTheft {
     public float DCentrumJanuari = 0;
     public float DCentrumFebruari = 0;
     public float DCentrumMaart = 0;
@@ -159,4 +158,3 @@ public class MonthPNeightbourhoodD {
     public float DHoogvlietNovember = 0;
     public float DHoogvlietDecember = 0;
 }
-

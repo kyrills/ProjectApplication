@@ -5,15 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CSVReaderDiefstalPerBuurt extends Colors implements IDataReaderDiefstalPerBuurt {
+public class CSVReaderTheftPerNeighborhood extends MonthPerNeightbourhoodTheft {
     Context myContext;
     String filename;
-    public CSVReaderDiefstalPerBuurt(Context myContext, String filename) {
+    public CSVReaderTheftPerNeighborhood(Context myContext, String filename) {
         this.myContext = myContext;
         this.filename = filename;
     }
 
-    public void runFietsDiefstalPerBuurt() {
+    public void runBikeTheftPerNeighborhood() {
 
         BufferedReader br = null;
         String line = "";

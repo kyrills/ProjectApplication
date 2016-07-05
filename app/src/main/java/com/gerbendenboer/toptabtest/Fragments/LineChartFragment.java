@@ -37,18 +37,18 @@ public class LineChartFragment extends Fragment{
         super.onCreate(savedInstanceState);
 
         ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJanuari(), 0));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getFebruari(), 1));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getMaart(), 2));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getApril(), 3));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getMei(), 4));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJuni(), 5));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJuli(), 6));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getAugustus(), 7));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getSeptember(), 8));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getOktober(), 9));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getNovember(), 10));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getDecember(), 11));
+        entries.add(new Entry(MainActivity.theft.getJanuari(), 0));
+        entries.add(new Entry(MainActivity.theft.getFebruari(), 1));
+        entries.add(new Entry(MainActivity.theft.getMaart(), 2));
+        entries.add(new Entry(MainActivity.theft.getApril(), 3));
+        entries.add(new Entry(MainActivity.theft.getMei(), 4));
+        entries.add(new Entry(MainActivity.theft.getJuni(), 5));
+        entries.add(new Entry(MainActivity.theft.getJuli(), 6));
+        entries.add(new Entry(MainActivity.theft.getAugustus(), 7));
+        entries.add(new Entry(MainActivity.theft.getSeptember(), 8));
+        entries.add(new Entry(MainActivity.theft.getOktober(), 9));
+        entries.add(new Entry(MainActivity.theft.getNovember(), 10));
+        entries.add(new Entry(MainActivity.theft.getDecember(), 11));
 
         LineDataSet dataset = new LineDataSet(entries, "Amount of stolen bicycles per month");
 
