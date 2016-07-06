@@ -21,14 +21,7 @@
             android:layout_height="600dp"
             android:layout_marginTop="0dp"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/graphButton"
-            android:layout_marginTop="141dp"
-            android:layout_alignTop="@+id/FragBarchart"
-            android:layout_centerHorizontal="true" />
+
 
     </RelativeLayout>
 

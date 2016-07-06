@@ -1,6 +1,5 @@
 package com.gerbendenboer.toptabtest;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -14,6 +13,7 @@ import android.widget.ListView;
 import com.gerbendenboer.toptabtest.Data.CSVReader;
 import com.gerbendenboer.toptabtest.Fragments.LineChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.HomeFragment;
+import com.gerbendenboer.toptabtest.Fragments.CalendarFragment;
 import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.GroupBarChartFragment;
@@ -29,21 +29,36 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     public static CSVReader Brands;
     private FloatingActionButton floatingActionButton;
     private FloatingActionButton floatingActionButton2;
+    public static CSVReaderBikeContainers bikeContainers;
+    public static CSVReaderContainerPerNeighborhood containerPerNeighborhood;
+    public static CSVReaderTheftPerNeighborhood theftPerNeighborhood;
+    public static CSVReaderTheftBrandColor theft;
+    public static CSVReaderTheftBrandColor brand;
+    public static CSVReaderTheftBrandColor color;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Fietstrommels = new CSVReader(this.getApplicationContext(), "fietstrommels.csv");
-//        Fietstrommels.runFietstrommels();
-//
-//        DiefstalMaand = new CSVReader(this.getApplicationContext(), "fietsroof_per_maand.csv");
-//        DiefstalMaand.runDiefstal();
-//
-//        Brands = new CSVReader(this.getApplicationContext(), "fietsmerk.csv");
-//        Brands.runBrand();
+        bikeContainers = new CSVReaderBikeContainers(this.getApplicationContext(), "fietstrommels.csv");
+        bikeContainers.runBikeContainers();
 
+        theftPerNeighborhood = new CSVReaderTheftPerNeighborhood(this.getApplicationContext(), "fietsroof_per_maand2.csv");
+        theftPerNeighborhood.runBikeTheftPerNeighborhood();
+
+        containerPerNeighborhood = new CSVReaderContainerPerNeighborhood(this.getApplicationContext(), "fietstrommels.csv");
+        containerPerNeighborhood.runBikePerNeighborhood();
+
+        theft = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsroof_per_maand.csv");
+        theft.runTheft();
+
+        color = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsmerk.csv");
+        color.runColor();
+
+        brand = new CSVReaderTheftBrandColor(this.getApplicationContext(), "fietsmerk.csv");
+        brand.runBrand();
         floatingActionButton = (FloatingActionButton) findViewById(R.id.myFAB);
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.myFAB2);
 
@@ -54,11 +69,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new HomeFragment(), "Home");
-//        viewPagerAdapter.addFragments(new LineChartFragment(), "Graph");
-//        viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
-//        viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
-//        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Grouped");
-//
+        viewPagerAdapter.addFragments(new LineChartFragment(), "Graph");
+//        viewPagerAdapter.addFragments(new BicycleFragment(), "");
+        viewPagerAdapter.addFragments(new PieChartFragment(), "Piechart");
+//        viewPagerAdapter.addFragments(new PieChartFragmentColour(), "Piechart2");
+//        viewPagerAdapter.addFragments(new CalenderFragment(), "Calender");
+        viewPagerAdapter.addFragments(new SingleBarChartFragment(), "Single");
+        viewPagerAdapter.addFragments(new GroupBarChartFragment(), "Grouped");
+
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 

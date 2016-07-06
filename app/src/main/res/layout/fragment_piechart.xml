@@ -4,28 +4,23 @@ android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
-    <!--<ToggleButton-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="New ToggleButton"-->
-    <!--android:id="@+id/toggleButton"-->
-    <!--android:layout_gravity="center_horizontal" />-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity= "center_horizontal">
+
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartBrand"
-            android:layout_width="300dp"
-            android:layout_height="600dp"
-            android:layout_marginTop="-135dp"/>
+            android:layout_width="350dp"
+            android:layout_height="490dp"
+            android:layout_marginTop="-50dp"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechartColour"
-            android:layout_width="300dp"
-            android:layout_height="600dp"
-            android:layout_marginTop="-110dp"/>
+            android:layout_width="350dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="-30dp"/>
     </LinearLayout>
 
 </ScrollView>

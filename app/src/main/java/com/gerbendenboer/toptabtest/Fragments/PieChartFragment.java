@@ -7,12 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ToggleButton;
 
-import com.gerbendenboer.toptabtest.Factory.ButtonFactory;
-import com.gerbendenboer.toptabtest.Factory.IButton;
+import com.gerbendenboer.toptabtest.MainActivity;
 import com.gerbendenboer.toptabtest.R;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -24,14 +23,7 @@ public class PieChartFragment extends Fragment {
     private PieChart pieChartColour;
     private PieData pieDataColour;
     private PieData pieDataBrand;
-
-    private static final int[] My_Colours = {
-            Color.rgb(180, 80, 138), Color.rgb(254, 149, 7), Color.rgb(254, 247, 120),
-            Color.rgb(106, 150, 134), Color.rgb(53, 210, 209), Color.rgb(255, 80, 138),
-            Color.rgb(254, 50, 7), Color.rgb(254, 200, 120), Color.rgb(106, 100, 134),
-            Color.rgb(106, 200, 134), Color.rgb(5, 175, 254), Color.rgb(102, 51, 0)
-    };
-
+    private float topFiveIndex;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -45,54 +37,83 @@ public class PieChartFragment extends Fragment {
         pieChartBrand = (PieChart) view.findViewById(R.id.piechartBrand);
         pieChartBrand.setData(pieDataBrand); //set pieData into chart
         pieChartBrand.setDescription("Most stolen bike brands");
-        pieChartBrand.setDescriptionColor(Color.WHITE);
-        pieChartBrand.animateY(1500);
-//        pieChartBrand.setTouchEnabled(false);
+        pieChartBrand.animateY(500);
+        pieChartBrand.setTouchEnabled(false);
+        Legend legendBrand = pieChartBrand.getLegend();
+        legendBrand.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+        pieChartBrand.getLegend().setWordWrapEnabled(true);
+
 
         pieChartColour = (PieChart) view.findViewById(R.id.piechartColour);
         pieChartColour.setData(pieDataColour);
         pieChartColour.setDescription("Most stolen bikes depending on colour");
-        pieChartColour.setDescriptionColor(Color.WHITE);
-        pieChartColour.animateY(1500);
-//        pieChartColour.setTouchEnabled(false);
+        pieChartColour.animateY(500);
+        pieChartColour.setTouchEnabled(false);
+        Legend legendColour = pieChartColour.getLegend();
+        legendColour.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<Entry> entriesColour = new ArrayList<>();
-        entriesColour.add(new Entry(4f, 0));
-        entriesColour.add(new Entry(8f, 1));
-        entriesColour.add(new Entry(6f, 2));
-        entriesColour.add(new Entry(12f, 3));
-        entriesColour.add(new Entry(18f, 4));
-        entriesColour.add(new Entry(9f, 5));
+        topFiveIndex = 0;
+        MainActivity.brand.runBrand();
 
+        ArrayList<Entry> entriesColour = new ArrayList<>();
+        entriesColour.add(new Entry(MainActivity.color.getBLAUW(), 8));
+        entriesColour.add(new Entry(MainActivity.color.getCHROOM(), 9));
+        entriesColour.add(new Entry(MainActivity.color.getGRIJS(), 10));
+        entriesColour.add(new Entry(MainActivity.color.getGROEN(), 11));
+        entriesColour.add(new Entry(MainActivity.color.getROOD(), 12));
+        entriesColour.add(new Entry(MainActivity.color.getZILVER(), 13));
+        entriesColour.add(new Entry(MainActivity.color.getZWART(), 14));
+        entriesColour.add(new Entry(MainActivity.color.getONBEKEND(), 15));
+//
         ArrayList<Entry> entriesBrand = new ArrayList<>();
-        entriesBrand.add(new Entry(9f, 0));
-        entriesBrand.add(new Entry(18f, 1));
-        entriesBrand.add(new Entry(12f, 2));
-        entriesBrand.add(new Entry(6f, 3));
-        entriesBrand.add(new Entry(8f, 4));
-        entriesBrand.add(new Entry(4f, 5));
+        entriesBrand.add(new Entry(MainActivity.brand.getBATAVUS(), 0));
+        entriesBrand.add(new Entry(MainActivity.brand.getGAZELLE(), 1));
+        entriesBrand.add(new Entry(MainActivity.brand.getGIANT(), 2));
+        entriesBrand.add(new Entry(MainActivity.brand.getPEUGEOT(), 3));
+        entriesBrand.add(new Entry(MainActivity.brand.getSPARTA(), 4));
+        entriesBrand.add(new Entry(MainActivity.brand.getUNION(), 5));
+        entriesBrand.add(new Entry(MainActivity.brand.getYAMAHA(), 6));
+        entriesBrand.add(new Entry(MainActivity.brand.getOVERIG(), 7));
 
         PieDataSet dataSetColour = new PieDataSet(entriesColour, "");
-        PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"");
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
+        ArrayList<String> labelsColour = new ArrayList<String>();
+        labelsColour.add("Blue");
+        labelsColour.add("Chrome");
+        labelsColour.add("Grey");
+        labelsColour.add("Green");
+        labelsColour.add("Red");
+        labelsColour.add("Silver");
+        labelsColour.add("Black");
+        labelsColour.add("Unknown");
 
-        pieDataColour = new PieData(labels, dataSetColour);
-        pieDataBrand = new PieData(labels, dataSetBrand);
+        PieDataSet dataSetBrand = new PieDataSet(entriesBrand,"");
+        ArrayList<String> labelsBrand = new ArrayList<String>();
+        labelsBrand.add("Batavus");
+        labelsBrand.add("Gazelle");
+        labelsBrand.add("Giant");
+        labelsBrand.add("Peugeot");
+        labelsBrand.add("Sparta");
+        labelsBrand.add("Union");
+        labelsBrand.add("Yamaha");
+        labelsBrand.add("Unknown");
+
+        pieDataColour = new PieData(labelsColour, dataSetColour);
+        pieDataBrand = new PieData(labelsBrand, dataSetBrand);
         dataSetColour.setColors(My_Colours);
         dataSetBrand.setColors(My_Colours);
     }
 
+    public static final int[] My_Colours = {
+            Color.rgb(180, 80, 138), Color.rgb(254, 149, 7), Color.rgb(254, 247, 120),
+            Color.rgb(106, 150, 134), Color.rgb(53, 210, 209), Color.rgb(255, 80, 138),
+            Color.rgb(254, 50, 7), Color.rgb(254, 200, 120), Color.rgb(106, 100, 134),
+            Color.rgb(106, 200, 134), Color.rgb(5, 175, 254), Color.rgb(102, 51, 0)
+    };
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

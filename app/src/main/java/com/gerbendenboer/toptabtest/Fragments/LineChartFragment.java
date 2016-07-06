@@ -37,34 +37,34 @@ public class LineChartFragment extends Fragment{
         super.onCreate(savedInstanceState);
 
         ArrayList<Entry> entries = new ArrayList<>();
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJanuari(), 0));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getFebruari(), 1));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getMaart(), 2));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getApril(), 3));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getMei(), 4));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJuni(), 5));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getJuli(), 6));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getAugustus(), 7));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getSeptember(), 8));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getOktober(), 9));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getNovember(), 10));
-        entries.add(new Entry(MainActivity.DiefstalMaand.getDecember(), 11));
+        entries.add(new Entry(MainActivity.theft.getJanuari(), 0));
+        entries.add(new Entry(MainActivity.theft.getFebruari(), 1));
+        entries.add(new Entry(MainActivity.theft.getMaart(), 2));
+        entries.add(new Entry(MainActivity.theft.getApril(), 3));
+        entries.add(new Entry(MainActivity.theft.getMei(), 4));
+        entries.add(new Entry(MainActivity.theft.getJuni(), 5));
+        entries.add(new Entry(MainActivity.theft.getJuli(), 6));
+        entries.add(new Entry(MainActivity.theft.getAugustus(), 7));
+        entries.add(new Entry(MainActivity.theft.getSeptember(), 8));
+        entries.add(new Entry(MainActivity.theft.getOktober(), 9));
+        entries.add(new Entry(MainActivity.theft.getNovember(), 10));
+        entries.add(new Entry(MainActivity.theft.getDecember(), 11));
 
-        LineDataSet dataset = new LineDataSet(entries, "Diefstal per maand");
+        LineDataSet dataset = new LineDataSet(entries, "Amount of stolen bicycles per month");
 
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("J");
-        labels.add("F");
-        labels.add("M");
-        labels.add("A");
-        labels.add("M");
-        labels.add("J");
-        labels.add("J");
-        labels.add("A");
-        labels.add("S");
-        labels.add("O");
-        labels.add("N");
-        labels.add("D");
+        labels.add("Jan");
+        labels.add("Feb");
+        labels.add("Mar");
+        labels.add("Apr");
+        labels.add("May");
+        labels.add("Jun");
+        labels.add("Jul");
+        labels.add("Aug");
+        labels.add("Sep");
+        labels.add("Oct");
+        labels.add("Nov");
+        labels.add("Dec");
 
         data = new LineData(labels, dataset);
         dataset.setColor(Color.parseColor("#e62e00"));
@@ -91,6 +91,8 @@ public class LineChartFragment extends Fragment{
         lineChart.setDescription("");
         Legend legend = lineChart.getLegend();
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+        lineChart.getLegend().setWordWrapEnabled(true);
+
     }
 
     @Override
