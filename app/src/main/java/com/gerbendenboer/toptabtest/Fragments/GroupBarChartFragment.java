@@ -22,6 +22,8 @@ public class GroupBarChartFragment extends android.support.v4.app.Fragment {
 
     public GroupBarChartFragment(String area){this.area = area;}
 
+    //In this fragment everything regarding the grouped barchart is created.
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

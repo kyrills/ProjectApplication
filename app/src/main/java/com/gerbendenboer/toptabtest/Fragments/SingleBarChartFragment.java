@@ -20,6 +20,7 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
 
+//This class creates a fragment with a Single Barchart.
 
 public class SingleBarChartFragment extends Fragment {
 

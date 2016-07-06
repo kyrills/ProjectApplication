@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 
+//This class retrieves the Longitude and Latitude of your current location.
+
 public final class GPSTracker implements LocationListener {
 
     private final Context mContext;

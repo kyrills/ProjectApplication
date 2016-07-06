@@ -22,6 +22,9 @@ import com.gerbendenboer.toptabtest.Fragments.PieChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.SingleBarChartFragment;
 import com.gerbendenboer.toptabtest.Fragments.GroupBarChartFragment;
 
+//Main Activity
+//Creates the viewpager -> This is the navigation menu between the fragments. (Home, Graph, Piechart, Single, Grouped)
+
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
     private Toolbar toolbar;
     private TabLayout tabLayout;

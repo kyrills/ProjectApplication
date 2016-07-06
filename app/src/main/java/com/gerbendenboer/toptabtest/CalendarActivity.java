@@ -18,6 +18,9 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 
+//This Activity is created when the user presses the calendar button
+//The hours and minutes entered by the user will be entered inside the Calendar app of the phone.
+
 public class CalendarActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";

@@ -19,10 +19,8 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import java.util.ArrayList;
 
+//This class creates a fragment including a linechart.
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class LineChartFragment extends Fragment{
 
     private LineChart lineChart;
@@ -74,10 +72,6 @@ public class LineChartFragment extends Fragment{
         dataset.setHighlightLineWidth(2);
         dataset.setCircleColor(Color.parseColor("#cccccc"));
         dataset.setCircleColorHole(Color.parseColor("#cccccc"));
-
-//        Optional
-//        dataset.setFillColor(Color.parseColor("#e62e00"));
-//        dataset.setDrawFilled(false);
     }
 
     @Override

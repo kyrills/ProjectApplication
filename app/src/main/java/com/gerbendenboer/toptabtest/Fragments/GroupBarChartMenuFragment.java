@@ -16,6 +16,8 @@ import com.gerbendenboer.toptabtest.Factory.ButtonFactory;
 import com.gerbendenboer.toptabtest.Factory.IButton;
 import com.gerbendenboer.toptabtest.R;
 
+//In this fragment everything regarding the grouped barchart-menu (buttons) is created.
+
 public class GroupBarChartMenuFragment extends Fragment {
     private Button centrumButton, charloisButton, delfshavenButton, feijenoordButton, noordButton, hillegersbergButton, overschieButton;
     private Button kcrooswijkButton, pernisButton, ijsselmondeButton, westButton, omoordButton, hoogvlietButton;

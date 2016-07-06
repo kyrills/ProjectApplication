@@ -11,13 +11,8 @@ import android.view.ViewGroup;
 import com.gerbendenboer.toptabtest.OnFragmentInteractionListener;
 import com.gerbendenboer.toptabtest.R;
 
+//This is the fragment where you start when you open up the app.
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link HomeFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- */
 public class HomeFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;

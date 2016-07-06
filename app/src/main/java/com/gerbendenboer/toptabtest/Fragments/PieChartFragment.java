@@ -18,6 +18,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 
 import java.util.ArrayList;
 
+//This class creates the fragment with 2 Piecharts.
+
 public class PieChartFragment extends Fragment {
     private PieChart pieChartBrand;
     private PieChart pieChartColour;
@@ -69,7 +71,7 @@ public class PieChartFragment extends Fragment {
         entriesColour.add(new Entry(MainActivity.color.getZILVER(), 13));
         entriesColour.add(new Entry(MainActivity.color.getZWART(), 14));
         entriesColour.add(new Entry(MainActivity.color.getONBEKEND(), 15));
-//
+
         ArrayList<Entry> entriesBrand = new ArrayList<>();
         entriesBrand.add(new Entry(MainActivity.brand.getBATAVUS(), 0));
         entriesBrand.add(new Entry(MainActivity.brand.getGAZELLE(), 1));

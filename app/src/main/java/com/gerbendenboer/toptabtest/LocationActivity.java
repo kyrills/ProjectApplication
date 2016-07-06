@@ -111,6 +111,8 @@ public class LocationActivity extends Activity {
             LONGITUDE = mGPS.getLongitude();
         }
 
+        //From here
+        //This piece of code translates the Longitude & Latitude to an address.
         Geocoder geocoder = new Geocoder(this, Locale.ENGLISH);
 
         try {

@@ -27,6 +27,7 @@ public class CalendarHelper {
     public static final int CALENDARHELPER_PERMISSION_REQUEST_CODE = 99;
 
 
+    //The method that creates an entry inside the Agenda app
     public static void MakeNewCalendarEntry(Activity caller,String title,String description,String location,long startTime,long endTime, boolean allDay,boolean hasAlarm, int calendarId,int selectedReminderValue) {
 
         ContentResolver cr = caller.getContentResolver();
